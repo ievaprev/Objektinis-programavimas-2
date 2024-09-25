@@ -2,8 +2,19 @@
 
 void ived(Stud &Lok) 
 {
-	cout << "Input Student Name, Surname and egzam points: ";
-	cin >> Lok.vardas >> Lok.pavarde >> Lok.egz;
+	//cout << "Input Student Name, Surname and egzam points: ";
+	cin >> Lok.vardas >> Lok.pavarde;
+	cout << "How many homework greades will you enter? " << endl;
+	int k, grade;
+	cin >> k;
+	cout << "Enter homework grades and exam grade at the end:" << endl;
+	for (int i = 0; i < k; i++)
+	{
+		cin >> grade;
+		Lok.ND.push_back(grade);
+	}
+	cin >> Lok.egz;
+	
 }
 
 void output(Stud &Lok)
