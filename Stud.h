@@ -8,4 +8,6 @@ struct Stud {
 
 void ived(Stud &Lok);
 void output(Stud& Lok);
-void val(Stud& Lok);
+void val(Stud &Lok);
+void finalgrade(Stud &Lok);
+void median(Stud& Lok);
