@@ -5,7 +5,7 @@ int main()
 {
     vector<Stud> Vec1;
     Stud Temp;
-    cout << "How many students you have: " << endl;
+    cout << "How many students you have: ";
     int n;
     cin >> n;
     for (int i = 0; i < n; i++) 
@@ -16,12 +16,26 @@ int main()
         Vec1.push_back(Temp);
         val(Temp);
     }
-    cout << setw(15) << left << "Student Name" << setw(15) << left << "Surname"<< setw(3) << right << "Egzam points" << endl;
-    for (int i = 0; i < n; i++) 
-    {
-        output(Vec1.at(i));
-    }
+    cout << "Do you want to see the median or mean of the final grade? (0 - mean, 1 - median)"  << endl;
+    int choice;
+    cin >> choice; 
+    cout << setw(15) << left << "Student Name" << setw(15) << left << "Surname"<< setw(3) << right << "Final grade" << endl;
     
+    for (int i = 0; i < n; i++)
+    {
+        if (choice == 0)
+        {
+            outputMean(Vec1.at(i));
+        }
+        else if (choice == 1)
+        {
+            outputMedian(Vec1.at(i));
+        }
+        else
+        {
+            cout << "Invalid choice!" << endl;
+            return 1;
+        }
+    }
     system("pause");
 }
-
