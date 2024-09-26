@@ -10,8 +10,9 @@ int main()
     cin >> n;
     for (int i = 0; i < n; i++) 
     {
-        cout << "Please input user data: " << endl;
+        cout << "Please input user data (Student name, surname): " << endl;
         ived(Temp);
+        finalgrade(Temp);
         Vec1.push_back(Temp);
         val(Temp);
     }
