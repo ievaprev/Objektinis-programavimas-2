@@ -143,8 +143,8 @@ void outputFile(vector<Stud>& stud)
 
 	for(auto& duom : stud)
 	{
-		cout << setw(18) << left << duom.vardas << setw(15) << left << duom.pavarde
-			<< setw(3) << right << fixed << setprecision(2) << duom.vid << "            "
+		cout << setw(18) << left << duom.pavarde << setw(15) << left << duom.vardas
+			<< setw(3) << right << fixed << setprecision(2) << duom.vid << "                "
 			<< setw(3) << right << fixed << setprecision(2) << duom.med << endl;
 	}
 }
