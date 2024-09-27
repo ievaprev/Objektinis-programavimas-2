@@ -47,7 +47,19 @@ int main()
     else if (textAts == 1) {
         cout << "Studentu skaicius: " << endl;
         int n;
-        cin >> n;
+        while (true) {
+            try {
+                if (!(cin >> n)) {
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
+                }
+                break;
+            }
+            catch (const exception& e) {
+                cerr << e.what() << endl;
+            }
+        }
         for (int i = 0; i < n; i++) 
         {
             cout << "Studento vardas, pavarde: " << endl;
@@ -59,7 +71,24 @@ int main()
 
         cout << "Ar norite galutini ivertinima skaiciuoti su mediana ar vidurkiu? (0 - vidurkiu, 1 - mediana)"  << endl;
         int choice;
-        cin >> choice;
+        while (true) {
+            try {
+                if (!(cin >> choice)) {
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
+                }
+        
+                if (choice != 0 && choice != 1) {
+                    throw runtime_error("Klaida: prasome pasirinkti 0 - vidurkiu arba 1 - mediana.");
+                }
+        
+                break;
+            }
+            catch (const exception& e) {
+                cerr << e.what() << endl;
+            }
+        }
     
         cout << setw(15) << left << "Studento vardas" << setw(15) << left << "Pavarde"<< setw(3) << right << "Galutinis ivertinimas" << endl;
 
