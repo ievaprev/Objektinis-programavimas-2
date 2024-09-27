@@ -5,36 +5,44 @@ int main()
 {
     vector<Stud> Vec1;
     Stud Temp;
-    cout << "How many students you have: ";
-    int n;
-    cin >> n;
-    for (int i = 0; i < n; i++) 
-    {
-        cout << "Please input user data (Student name, surname): " << endl;
-        ived(Temp);
-        finalgrade(Temp);
-        Vec1.push_back(Temp);
-        val(Temp);
-    }
-    cout << "Do you want to see the median or mean of the final grade? (0 - mean, 1 - median)"  << endl;
-    int choice;
-    cin >> choice; 
-    cout << setw(15) << left << "Student Name" << setw(15) << left << "Surname"<< setw(3) << right << "Final grade" << endl;
+    int textAts;
+    string textFile; 
     
-    for (int i = 0; i < n; i++)
-    {
-        if (choice == 0)
+    cout << "Ar norite nuskaityti informacija is tekstinio failo? (0 - taip, 1 - ne)" << endl; 
+    cin >> textAts; 
+
+    if (textAts == 0) {
+        cout << "Pateikite failo varda: " << endl;
+        cin >> textFile;
+        readFile(textFile, Vec1);
+    }
+    else if (textAts == 1) {
+        cout << "Studentu skaicius: " << endl;
+        int n;
+        cin >> n;
+        for (int i = 0; i < n; i++) 
         {
-            outputMean(Vec1.at(i));
+            cout << "Studento vardas, pavarde: " << endl;
+            ived(Temp);
+            finalgrade(Temp);
+            Vec1.push_back(Temp);
+            val(Temp);
         }
-        else if (choice == 1)
+
+        cout << "Ar norite galutini ivertinima skaiciuoti su mediana ar vidurkiu? (0 - vidurkiu, 1 - mediana)"  << endl;
+        int choice;
+        cin >> choice;
+    
+        cout << setw(15) << left << "Studento vardas" << setw(15) << left << "Pavarde"<< setw(3) << right << "Galutinis ivertinimas" << endl;
+
+        for (int i = 0; i < n; i++)
         {
-            outputMedian(Vec1.at(i));
-        }
-        else
-        {
-            cout << "Invalid choice!" << endl;
-            return 1;
+            if (choice == 0){
+                outputMean(Vec1.at(i));
+            }
+            else if (choice == 1){
+                outputMedian(Vec1.at(i));
+            }
         }
     }
     system("pause");
