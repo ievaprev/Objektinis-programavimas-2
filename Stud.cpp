@@ -3,17 +3,27 @@
 void ived(Stud &Lok) 
 {
 	cin >> Lok.vardas >> Lok.pavarde;
-	cout << "How many homework greades will you enter? " << endl;
-	int k, grade;
-	cin >> k;
-	cout << "Enter homework grades:" << endl;
-	for (int i = 0; i < k; i++)
-	{
-		cin >> grade;
-		Lok.ND.push_back(grade);
+
+	cout << "Iveskite namu darbu rezultatus (noredami uzbaigti spauskite 0 ir enter):" << endl; 
+	int grade;
+
+	while (cin >> grade && grade != 0) {
+		if (grade >= 1 && grade <= 10) {
+			Lok.ND.push_back(grade);
+		}
+		else {
+			cout << "Pazimys turi buti nuo 1 iki 10." << endl;
+			cin.clear();
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
 	}
-	cout << "Enter exam points: ";
-	cin >> Lok.egz;
+
+	cout << "Iveskite egzamino ivertinima: " << endl;
+	while (cin >> Lok.egz && (Lok.egz < 1 || Lok.egz > 10)) {
+		cout << "Pazimys turi buti nuo 1 iki 10." << endl;
+		cin.clear();
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	}
 	
 }
 
@@ -45,24 +55,32 @@ void finalgrade(Stud &Lok)
 
 double median(const vector <int>& ND)
 {
+	if (ND.empty())
+		return 0;
+	
 	double med;
 	vector<int> sortedND = ND;
-	sort(sortedND.begin(), sortedND.end());
 	size_t elements = ND.size();
+	
+	sort(sortedND.begin(), sortedND.end());
 	if (elements % 2 == 0) {
-		med = (ND[elements / 2 - 1] + ND[elements / 2]) / 2.0;
+		med = (sortedND[elements / 2 - 1] + sortedND[elements / 2]) / 2.0;
 	}
 	else {
-		med = ND[elements / 2];
+		med = sortedND[elements / 2];
 	}
 	return med;
 }
 
 double mean(const vector <int>& ND)
 {
+	if (ND.empty())
+		return 0;
+	
 	double vidurkis;
 	size_t elements = ND.size();
 	int sum = 0;
+	
 	for (int i = 0; i < elements; i++)
 	{
 		sum = sum + ND[i];
