@@ -105,3 +105,32 @@ double mean(const vector <int>& ND)
 
 	return vidurkis;
 }
+
+void readFile(const string& fileName, vector <Stud>& stud) {
+	ifstream inFile(fileName);
+
+	if (!inFile.is_open()) {
+		throw runtime_error("Nepavyko atidaryti failo: " + fileName);
+	}
+
+	string line;
+	getline(inFile, line);
+
+	while (getline(inFile, line)) {
+
+		istringstream iss(line);
+		Stud Lok;
+		int score;
+
+		iss >> Lok.pavarde >> Lok.vardas;
+
+		Lok.ND.clear();
+		for (int i = 0; i < 5; ++i) {
+			iss >> score;
+			Lok.ND.push_back(score);
+		}
+
+		iss >> Lok.egz;
+		stud.push_back(Lok);
+	}
+}
