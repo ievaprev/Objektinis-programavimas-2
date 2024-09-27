@@ -88,13 +88,13 @@ void ived(Stud &Lok)
 
 void outputMean(Stud &Lok)
 {
-	cout << setw(15) << left << Lok.vardas << setw(15) << left << Lok.pavarde 
+	cout << setw(18) << left << Lok.vardas << setw(15) << left << Lok.pavarde 
 		<< setw(3) << right << fixed << setprecision(2) << Lok.vid << endl;
 }
 
 void outputMedian(Stud& Lok)
 {
-	cout << setw(15) << left << Lok.vardas << setw(15) << left << Lok.pavarde
+	cout << setw(18) << left << Lok.vardas << setw(15) << left << Lok.pavarde
 		<< setw(3) << right << fixed << setprecision(2) << Lok.med<< endl;
 }
 	
