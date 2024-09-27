@@ -5,10 +5,24 @@ void ived(Stud &Lok)
 	cin >> Lok.vardas >> Lok.pavarde;
 	cout << "Ar noretumete automatiskai sugeneruoti namu darbu ir egzamino rezultatus? (0 - taip, 1 - ne) " << endl;
 	int gchoice;
-	cin >> gchoice; 
+	while (true) {
+		try {
+			if (!(cin >> gchoice)) {
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+				throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
+			}
+			if (gchoice != 0 && gchoice != 1) {
+				throw runtime_error("Klaida: prasome pasirinkti 0 - taip arba 1 - mne.");
+			}
+			break;
+		}
+		catch (const exception& e) {
+			cerr << e.what() << endl;
+		}
+	} 
 
 	if (gchoice == 0) {
-
 		int NDnumber = (rand() % 10) + 1;
 		for (int i = 0; i < NDnumber; i++) {
 			Lok.ND.push_back(rand() % 10 + 1);
@@ -17,7 +31,6 @@ void ived(Stud &Lok)
 		Lok.egz = 1 + (rand() % 10);
 	}
 	else if (gchoice == 1) {
-
 		cout << "Iveskite namu darbu rezultatus (noredami uzbaigti spauskite 0 ir enter):" << endl; 
 
 		int grade;
@@ -136,13 +149,10 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 			while (iss >> score) {
 				Lok1.ND.push_back(score);
 			}
-	
-	
 			Lok1.egz = Lok1.ND.back();
 			Lok1.ND.pop_back();
 	
 			stud.push_back(Lok1);
-	
 		}
 		inFile.close();
 	}
