@@ -134,3 +134,17 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 		stud.push_back(Lok);
 	}
 }
+
+void outputFile(vector<Stud>& stud)
+{
+	sort(stud.begin(), stud.end(), [](const Stud& a, const Stud& b) {
+		return a.vardas < b.vardas;
+		});
+
+	for(auto& duom : stud)
+	{
+		cout << setw(18) << left << duom.vardas << setw(15) << left << duom.pavarde
+			<< setw(3) << right << fixed << setprecision(2) << duom.vid << "            "
+			<< setw(3) << right << fixed << setprecision(2) << duom.med << endl;
+	}
+}
