@@ -6,13 +6,15 @@
 * main.cpp yra pagrindinis failas
 * Stud.cpp faile surašytos visi programoje naudojami metodai
 * MyLib.h faile aprašytos visos pogramoje naudojamos bibliotekos
-* Stud.h faile aprašyta Stud struktūra, kuri aprašo studentą ir metodų deklaracijos. <br/>
-<br/>
+* Stud.h faile aprašyta Stud struktūra, kuri aprašo studentą ir metodų deklaracijos. 
+<a/>
+
 **Metodai:**
 * Vartotojas turi pasirinkimą ar nori studento informacija nuskaityti nuo tekstinio failo ar įrašyti rankiniu būdu
 * Įrašinėjant rankiniu būdu, vartotojas turi galimybe sugeneruoti atsitiktinius namų darbų ir egzamino rezultatus
-* Vartotojas turi galimyę galutinį rezultatą išspausdinti arba skaičiuojant su namų darbų mediana, arba su namų darbų vidurkiu. <br/>
-<br/>
+* Vartotojas turi galimyę galutinį rezultatą išspausdinti arba skaičiuojant su namų darbų mediana, arba su namų darbų vidurkiu. 
+<a/>
+  
 **Išsimčių valdymas:**
 * Klausimuose, kuriuose reikalaujama vartotojo pasirinkti vieną iš dviejų variantų yra naudojama try and catch norint apsaugoti nuo neteisingų įvedimų ir taip pat sistemos lūžimo, jeigu būtų įvesta raidė.
 * Norint įvesti namų darbų ar egzamino pažymį vartotojas yra apribojamas sveikaisiais skaičiais nuo 1 iki 10
