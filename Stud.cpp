@@ -108,30 +108,47 @@ double mean(const vector <int>& ND)
 
 void readFile(const string& fileName, vector <Stud>& stud) {
 	ifstream inFile(fileName);
-
-	if (!inFile.is_open()) {
-		throw runtime_error("Nepavyko atidaryti failo: " + fileName);
-	}
-
-	string line;
-	getline(inFile, line);
-
-	while (getline(inFile, line)) {
-
-		istringstream iss(line);
-		Stud Lok;
-		int score;
-
-		iss >> Lok.pavarde >> Lok.vardas;
-
-		Lok.ND.clear();
-		for (int i = 0; i < 5; ++i) {
-			iss >> score;
-			Lok.ND.push_back(score);
+	try {
+		if (!inFile.is_open()) {
+			throw runtime_error("Error: neatidaromas filas);
 		}
-
-		iss >> Lok.egz;
-		stud.push_back(Lok);
+		string line;
+		getline(inFile, line);
+		while (getline(inFile, line)) {
+			istringstream iss(line);
+			Stud Lok1;
+			int score;
+	
+			iss >> Lok1.pavarde >> Lok1.vardas;
+	
+			Lok1.ND.clear();
+			
+			if (Lok1.ND.empty()) {
+				cerr << "Error: Rasta eilute be duomenu apie namu darbu ivertinimus " << endl;
+				continue;
+			}
+			for (int i = 0; i < Lok1.ND.size(); i++) {
+				if (Lok1.ND.at(i) < 1 || Lok1.ND.at(i) > 10) {
+					throw runtime_error("Error: Namu darbu pazymy sturi but tarp 1 ir 10");
+				}
+			}
+			
+			while (iss >> score) {
+				Lok1.ND.push_back(score);
+			}
+	
+	
+			Lok1.egz = Lok1.ND.back();
+			Lok1.ND.pop_back();
+	
+			stud.push_back(Lok1);
+	
+		}
+		inFile.close();
+	}
+	catch (exception& e) {
+		cerr << e.what() << endl;
+		exit(EXIT_FAILURE);
 	}
 }
 
