@@ -3,28 +3,44 @@
 void ived(Stud &Lok) 
 {
 	cin >> Lok.vardas >> Lok.pavarde;
+	cout << "Ar noretumete automatiskai sugeneruoti namu darbu ir egzamino rezultatus? (0 - taip, 1 - ne) " << endl;
+	int gchoice;
+	cin >> gchoice; 
 
-	cout << "Iveskite namu darbu rezultatus (noredami uzbaigti spauskite 0 ir enter):" << endl; 
-	int grade;
+	if (gchoice == 0) {
 
-	while (cin >> grade && grade != 0) {
-		if (grade >= 1 && grade <= 10) {
-			Lok.ND.push_back(grade);
+		int NDnumber = (rand() % 10) + 1;
+		for (int i = 0; i < NDnumber; i++) {
+			Lok.ND.push_back(rand() % 10 + 1);
 		}
-		else {
+
+		Lok.egz = 1 + (rand() % 10);
+	}
+	else if (gchoice == 1) {
+
+		cout << "Iveskite namu darbu rezultatus (noredami uzbaigti spauskite 0 ir enter):" << endl; 
+
+		int grade;
+
+		while (cin >> grade && grade != 0)
+		{
+			if (grade >= 1 && grade <= 10) {
+				Lok.ND.push_back(grade);
+			}
+			else {
+				cout << "Pazimys turi buti nuo 1 iki 10." << endl;
+				cin.clear();
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			}
+		}
+		cout << "Iveskite egzamino ivertinima: " << endl;
+
+		while (cin >> Lok.egz && (Lok.egz < 1 || Lok.egz > 10)) {
 			cout << "Pazimys turi buti nuo 1 iki 10." << endl;
 			cin.clear();
-			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 	}
-
-	cout << "Iveskite egzamino ivertinima: " << endl;
-	while (cin >> Lok.egz && (Lok.egz < 1 || Lok.egz > 10)) {
-		cout << "Pazimys turi buti nuo 1 iki 10." << endl;
-		cin.clear();
-		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	}
-	
 }
 
 void outputMean(Stud &Lok)
