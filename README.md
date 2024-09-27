@@ -3,14 +3,14 @@
 *Namų darbų rezultatai - vartotojui leidžiama pasirinkti ar namų darbų rezultatus skaičiuoti su mediana ar gauti jų vidurkį.*<br />
 <br/>
 **Failu paaiškinimas:**
-*main.cpp yra pagrindinis failas
-*Stud.cpp faile surašytos visi programoje naudojami metodai
-*MyLib.h faile aprašytos visos pogramoje naudojamos bibliotekos
-*Stud.h faile aprašyta Stud struktūra, kuri aprašo studentą ir metodų deklaracijos. <br />
+* main.cpp yra pagrindinis failas
+* Stud.cpp faile surašytos visi programoje naudojami metodai
+* MyLib.h faile aprašytos visos pogramoje naudojamos bibliotekos
+* Stud.h faile aprašyta Stud struktūra, kuri aprašo studentą ir metodų deklaracijos. <br />
 <br />
 **Metodai:**
-*Vartotojas turi pasirinkimą ar nori studento informacija nuskaityti nuo tekstinio failo ar įrašyti rankiniu būdu
-*Įrašinėjant rankiniu būdu, vartotojas turi galimybe sugeneruoti atsitiktinius namų darbų ir egzamino rezultatus
+* Vartotojas turi pasirinkimą ar nori studento informacija nuskaityti nuo tekstinio failo ar įrašyti rankiniu būdu
+* Įrašinėjant rankiniu būdu, vartotojas turi galimybe sugeneruoti atsitiktinius namų darbų ir egzamino rezultatus
 *Vartotojas turi galimyę galutinį rezultatą išspausdinti arba skaičiuojant su namų darbų mediana, arba su namų darbų vidurkiu
 <br \>
 **Išsimčių valdymas:**
