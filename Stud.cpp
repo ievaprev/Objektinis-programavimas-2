@@ -12,46 +12,76 @@ void ived(Stud &Lok)
 				cin.ignore(numeric_limits<streamsize>::max(), '\n');
 				throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
 			}
+
 			if (gchoice != 0 && gchoice != 1) {
 				throw runtime_error("Klaida: prasome pasirinkti 0 - taip arba 1 - mne.");
 			}
+
 			break;
 		}
 		catch (const exception& e) {
 			cerr << e.what() << endl;
 		}
-	} 
+	}
 
 	if (gchoice == 0) {
+
 		int NDnumber = (rand() % 10) + 1;
 		for (int i = 0; i < NDnumber; i++) {
 			Lok.ND.push_back(rand() % 10 + 1);
 		}
-
 		Lok.egz = 1 + (rand() % 10);
 	}
 	else if (gchoice == 1) {
+
 		cout << "Iveskite namu darbu rezultatus (noredami uzbaigti spauskite 0 ir enter):" << endl; 
-
 		int grade;
+		
+		while (true) {
+			try {
+				if (!(cin >> grade)) { 
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+					throw invalid_argument("Klaida: prasome ivesti skaiciu.");  
+				}
 
-		while (cin >> grade && grade != 0)
-		{
-			if (grade >= 1 && grade <= 10) {
-				Lok.ND.push_back(grade);
+				if (grade == 0) {
+					break; 
+				}
+				else if (grade >= 1 && grade <= 10) {
+					Lok.ND.push_back(grade); 
+				}
+				else {
+					throw out_of_range("Pazimys turi buti nuo 1 iki 10.");  
+				}
 			}
-			else {
-				cout << "Pazimys turi buti nuo 1 iki 10." << endl;
-				cin.clear();
-				cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			catch (const exception& e) {
+				cout << e.what() << endl; 
+				cin.clear(); 
+				cin.ignore(numeric_limits<streamsize>::max(), '\n');  
 			}
 		}
+
 		cout << "Iveskite egzamino ivertinima: " << endl;
 
-		while (cin >> Lok.egz && (Lok.egz < 1 || Lok.egz > 10)) {
-			cout << "Pazimys turi buti nuo 1 iki 10." << endl;
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		while (true) {
+			try {
+				if (!(cin >> Lok.egz)) {
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
+					throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
+				}
+
+				if (Lok.egz < 1 || Lok.egz > 10) {
+					throw runtime_error("Klaida: prasome ivesti skaiciu nuo 1 iki 10.");
+				}
+
+				break;
+			}
+			catch (const exception& e) {
+				cerr << e.what() << endl;
+
+			}
 		}
 	}
 }
