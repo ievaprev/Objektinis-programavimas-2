@@ -15,6 +15,15 @@ int main()
         cout << "Pateikite failo varda: " << endl;
         cin >> textFile;
         readFile(textFile, Vec1);
+
+        cout << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas" 
+            << setw(10) << right << "Galutinis (Vid.)" << "    "
+            << setw(10) << right << "Galutinis (Med.)" << endl;
+
+        for (Stud& student : Vec1) {
+            finalgrade(student);
+        }
+        outputFile(Vec1);
     }
     else if (textAts == 1) {
         cout << "Studentu skaicius: " << endl;
