@@ -9,7 +9,26 @@ int main()
     string textFile; 
     
     cout << "Ar norite nuskaityti informacija is tekstinio failo? (0 - taip, 1 - ne)" << endl; 
-    cin >> textAts; 
+    while (true) {
+        try {
+            if (!(cin >> textAts)) {  
+                cin.clear(); 
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+                throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
+            }
+    
+            if (textAts != 0 && textAts != 1) {  
+                throw runtime_error("Klaida: prasome pasirinkti 0 - taip arba 1 - ne.");
+            }
+    
+            break;  
+        }
+        catch (const exception& e) {
+            cerr << e.what() << endl;  
+            cin.clear();  
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+    }
 
     if (textAts == 0) {
         cout << "Pateikite failo varda: " << endl;
