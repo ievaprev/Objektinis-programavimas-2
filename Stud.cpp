@@ -153,7 +153,7 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 	ifstream inFile(fileName);
 	try {
 		if (!inFile.is_open()) {
-			throw runtime_error("Error: neatidaromas filas);
+			throw runtime_error("Error: neatidaromas filas");
 		}
 		string line;
 		getline(inFile, line);
@@ -164,6 +164,10 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 	
 			iss >> Lok1.pavarde >> Lok1.vardas;
 			Lok1.ND.clear();
+			while (iss >> score) {
+				Lok1.ND.push_back(score);
+			}
+
 			
 			if (Lok1.ND.empty()) {
 				cerr << "Error: Rasta eilute be duomenu apie namu darbu ivertinimus " << endl;
@@ -173,10 +177,6 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 				if (Lok1.ND.at(i) < 1 || Lok1.ND.at(i) > 10) {
 					throw runtime_error("Error: Namu darbu pazymy sturi but tarp 1 ir 10");
 				}
-			}
-			
-			while (iss >> score) {
-				Lok1.ND.push_back(score);
 			}
 			Lok1.egz = Lok1.ND.back();
 			Lok1.ND.pop_back();
@@ -189,6 +189,7 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 		exit(EXIT_FAILURE);
 	}
 }
+
 
 void outputFile(vector<Stud>& stud)
 {
