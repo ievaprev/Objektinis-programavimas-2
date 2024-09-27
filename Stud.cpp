@@ -163,7 +163,6 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 			int score;
 	
 			iss >> Lok1.pavarde >> Lok1.vardas;
-	
 			Lok1.ND.clear();
 			
 			if (Lok1.ND.empty()) {
@@ -181,7 +180,6 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 			}
 			Lok1.egz = Lok1.ND.back();
 			Lok1.ND.pop_back();
-	
 			stud.push_back(Lok1);
 		}
 		inFile.close();
