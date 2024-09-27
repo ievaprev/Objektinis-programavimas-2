@@ -5,10 +5,10 @@ int main()
 {
     vector<Stud> Vec1;
     Stud Temp;
+    cout << "Ar norite nuskaityti informacija is tekstinio failo? (0 - taip, 1 - ne)" << endl;
     int textAts;
     string textFile; 
-    
-    cout << "Ar norite nuskaityti informacija is tekstinio failo? (0 - taip, 1 - ne)" << endl; 
+
     while (true) {
         try {
             if (!(cin >> textAts)) {  
@@ -16,17 +16,16 @@ int main()
                 cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
                 throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
             }
-    
+
             if (textAts != 0 && textAts != 1) {  
                 throw runtime_error("Klaida: prasome pasirinkti 0 - taip arba 1 - ne.");
             }
-    
+
             break;  
         }
         catch (const exception& e) {
             cerr << e.what() << endl;  
-            cin.clear();  
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  
         }
     }
 
@@ -47,6 +46,7 @@ int main()
     else if (textAts == 1) {
         cout << "Studentu skaicius: " << endl;
         int n;
+
         while (true) {
             try {
                 if (!(cin >> n)) {
@@ -60,6 +60,7 @@ int main()
                 cerr << e.what() << endl;
             }
         }
+        
         for (int i = 0; i < n; i++) 
         {
             cout << "Studento vardas, pavarde: " << endl;
@@ -78,11 +79,11 @@ int main()
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
                 }
-        
+
                 if (choice != 0 && choice != 1) {
                     throw runtime_error("Klaida: prasome pasirinkti 0 - vidurkiu arba 1 - mediana.");
                 }
-        
+
                 break;
             }
             catch (const exception& e) {
@@ -90,7 +91,7 @@ int main()
             }
         }
     
-        cout << setw(15) << left << "Studento vardas" << setw(15) << left << "Pavarde"<< setw(3) << right << "Galutinis ivertinimas" << endl;
+        cout << setw(15) << left << "Studento vardas" << "   " << setw(15) << left << "Pavarde" << setw(3) << right << "Galutinis ivertinimas" << endl;
 
         for (int i = 0; i < n; i++)
         {
@@ -104,3 +105,4 @@ int main()
     }
     system("pause");
 }
+
