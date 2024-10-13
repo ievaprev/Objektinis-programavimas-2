@@ -25,23 +25,58 @@ int main()
         }
         catch (const exception& e) {
             cerr << e.what() << endl;  
-  
         }
     }
 
     if (textAts == 0) {
-        cout << "Pateikite failo varda: " << endl;
-        cin >> textFile;
-        readFile(textFile, Vec1);
+        cout << "Ar norite sugeneruoti failus? (0 - taip, 1 - ne)" << endl;
+        int genrAts;
+        while (true) {
+            try {
+                if (!(cin >> genrAts)) {
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
+                }
 
-        cout << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas" 
+                if (genrAts != 0 && genrAts != 1) {
+                    throw runtime_error("Klaida: prasome pasirinkti 0 - taip arba 1 - ne.");
+                }
+
+                break;
+            }
+            catch (const exception& e) {
+                cerr << e.what() << endl;
+            }
+        }
+
+        if (genrAts == 0) {
+            int b = 1000;
+
+            for (int i = 0; i < 5; i++)
+            {
+                generateFile("studentai" + to_string(b) + ".txt", b);
+                readFile("studentai" + to_string(b) + ".txt", Vec1);
+
+                b *= 10;
+                system("pause");
+            }
+        }
+        else {
+            cout << "Pateikite failo varda: " << endl;
+            cin >> textFile;
+            readFile(textFile, Vec1);
+
+            cout << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas" 
             << setw(10) << right << "Galutinis (Vid.)" << "    "
             << setw(10) << right << "Galutinis (Med.)" << endl;
 
-        for (Stud& student : Vec1) {
-            finalgrade(student);
+            for (Stud& student : Vec1) {
+                finalgrade(student);
+            }
+            outputFile(Vec1);
+
         }
-        outputFile(Vec1);
     }
     else if (textAts == 1) {
         cout << "Studentu skaicius: " << endl;
@@ -79,11 +114,9 @@ int main()
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
                 }
-
                 if (choice != 0 && choice != 1) {
                     throw runtime_error("Klaida: prasome pasirinkti 0 - vidurkiu arba 1 - mediana.");
                 }
-
                 break;
             }
             catch (const exception& e) {
@@ -103,6 +136,4 @@ int main()
             }
         }
     }
-    system("pause");
 }
-
