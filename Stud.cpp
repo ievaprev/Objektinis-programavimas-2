@@ -1,5 +1,6 @@
 #include "Stud.h"
 
+
 void ived(Stud &Lok) 
 {
 	cin >> Lok.vardas >> Lok.pavarde;
@@ -30,15 +31,18 @@ void ived(Stud &Lok)
 		for (int i = 0; i < NDnumber; i++) {
 			Lok.ND.push_back(rand() % 10 + 1);
 		}
+
 		Lok.egz = 1 + (rand() % 10);
 	}
 	else if (gchoice == 1) {
 
 		cout << "Iveskite namu darbu rezultatus (noredami uzbaigti spauskite 0 ir enter):" << endl; 
+
 		int grade;
-		
+
 		while (true) {
 			try {
+
 				if (!(cin >> grade)) { 
 					cin.clear();
 					cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
@@ -116,12 +120,10 @@ double median(const vector <int>& ND)
 {
 	if (ND.empty())
 		return 0;
-	
 	double med;
 	vector<int> sortedND = ND;
-	size_t elements = ND.size();
-	
 	sort(sortedND.begin(), sortedND.end());
+	size_t elements = ND.size();
 	if (elements % 2 == 0) {
 		med = (sortedND[elements / 2 - 1] + sortedND[elements / 2]) / 2.0;
 	}
@@ -135,11 +137,9 @@ double mean(const vector <int>& ND)
 {
 	if (ND.empty())
 		return 0;
-	
 	double vidurkis;
 	size_t elements = ND.size();
 	int sum = 0;
-	
 	for (int i = 0; i < elements; i++)
 	{
 		sum = sum + ND[i];
@@ -148,5 +148,3 @@ double mean(const vector <int>& ND)
 
 	return vidurkis;
 }
-
-
