@@ -68,12 +68,12 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 **Failas: Studentai 1000000**
 | VEIKSMAS | VYKDYMO VIDURKIS |
 | --- | --- |
-| Failo generavimas |                |
-| Failo nuskaitymas |                |
-| Failo grupavimas  |                |
-| Failo rušiavimas  |                |
-| Studentų išvedimas į smart filą |               |
-| Studentų išvedimas į dumb filą |               |
+| Failo generavimas | 14.8723125 s |
+| Failo nuskaitymas | 8.2884075 s |
+| Failo grupavimas  | 0.851942625 s |
+| Failo rušiavimas  | 0.71661653 s |
+| Studentų išvedimas į smart filą | 5.7939675 s |
+| Studentų išvedimas į dumb filą | 2.55361375 s|
 
 **Failas: Studentai 10000000**
 | VEIKSMAS | VYKDYMO VIDURKIS|
