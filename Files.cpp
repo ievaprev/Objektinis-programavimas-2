@@ -106,5 +106,5 @@ void outputFile(const string& fileName, vector<Stud>& stud)
 
 	outfile.close();
 
-	cout << "Failo generavimas uztruko: " << t.elapsed() << " s\n";
+	cout << "Suskirstytu studentu irasymas i " << fileName << " faila utruko: " << t.elapsed() << " s\n";
 }
