@@ -148,3 +148,14 @@ double mean(const vector <int>& ND)
 
 	return vidurkis;
 }
+
+void grouping(vector<Stud>& smart, vector<Stud>& dumb, Stud& Lok)
+{
+	finalgrade(Lok);
+	if (Lok.vid >= 5.0) {
+		smart.push_back(Lok);
+	}
+	else if(Lok.vid < 5) {
+		dumb.push_back(Lok);
+	}
+}
