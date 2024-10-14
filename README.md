@@ -33,7 +33,7 @@
 * Nuskaitant failą yra tikrinama ar failas atsidaro, ar nuskaitytoje eilutėje yra namų darbų įrašai ir ar įrašyti namų darbų duomenys atitinka nustatytus standartus(sveikieji skaičiai nuo 1 iki 10 ir ar nėra įrašyta raidė). Pasitaikius išimčiai išmetama atitinkama klaida.
 
 **Laiko matavimas** <br/>
-Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **8** kartų ir iš gautų laikų buvo išvestas vidurkis. Žemiau pateikta kiekvieno failo testavimo rezultatai.
+Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **8** kartus ir iš gautų laikų buvo išvestas vidurkis. Žemiau pateikta kiekvieno failo testavimo rezultatai.
 
 **Failas: Studentai 1000**
 | VEIKSMAS | VYKDYMO VIDURKIS|
