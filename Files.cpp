@@ -48,6 +48,7 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 	cout << "Failo nuskaitymas uztruko: " << r.elapsed() << " s\n";
 }
 
+
 void generateFile(const string& fileName, const int& number)
 {
 	Timer t;
@@ -73,9 +74,13 @@ void generateFile(const string& fileName, const int& number)
 	outfile.close();
 
 	cout << "----------------------------------------------------" << endl;
+
 	cout << "Failas " << fileName << " uzdarytas" << endl;
+
 	cout << "     " << endl;
+
 	cout << "Failo generavimas uztruko: " << t.elapsed() << " s\n";
+
 }
 
 void outputFile(vector<Stud>& stud)
@@ -98,10 +103,14 @@ void outputInFile(const string& fileName, vector<Stud>& stud)
 
 	ofstream outfile(fileName);
 
+	outfile << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas"
+		<< setw(10) << right << "Galutinis (Vid.)" << endl;
+
+
 	for (Stud& duom : stud)
 	{
 		outfile << setw(18) << left << duom.pavarde << setw(15) << left << duom.vardas
-			<< setw(3) << right << fixed << setprecision(2) << duom.vid;
+			<< setw(3) << right << fixed << setprecision(2) << duom.vid << endl;
 	}
 
 	outfile.close();
