@@ -1,4 +1,5 @@
 #include "Stud.h"
+#include "Timer.h"
 
 
 void ived(Stud &Lok) 
@@ -158,4 +159,35 @@ void grouping(vector<Stud>& smart, vector<Stud>& dumb, Stud& Lok)
 	else if(Lok.vid < 5) {
 		dumb.push_back(Lok);
 	}
+}
+
+void sort(vector<Stud>& smart, vector<Stud>& dumb, const int& choice) {
+	Timer t;
+
+	if (choice == 1) {
+		sort(smart.begin(), smart.end(), [](const Stud& a, const Stud& b) {
+			return a.vardas < b.vardas;});
+		sort(dumb.begin(), dumb.end(), [](const Stud& a, const Stud& b) {
+			return a.vardas < b.vardas;});	
+	}
+	else if (choice == 2) {
+		sort(smart.begin(), smart.end(), [](const Stud& a, const Stud& b) {
+			return a.pavarde < b.pavarde; });
+		sort(dumb.begin(), dumb.end(), [](const Stud& a, const Stud& b) {
+			return a.pavarde < b.pavarde; });
+	}
+	else if (choice == 3) {
+		sort(smart.begin(), smart.end(), [](const Stud& a, const Stud& b) {
+			return a.vid > b.vid; });
+		sort(dumb.begin(), dumb.end(), [](const Stud& a, const Stud& b) {
+			return a.vid > b.vid; });
+	}
+	else if (choice == 4) {
+		sort(smart.begin(), smart.end(), [](const Stud& a, const Stud& b) {
+			return a.vid < b.vid; });
+		sort(dumb.begin(), dumb.end(), [](const Stud& a, const Stud& b) {
+			return a.vid < b.vid; });
+	}
+
+	cout << "Surikiuoti studentus, pagal jusu pasirinkima, uztruko: " << t.elapsed() << " s\n" << endl;
 }
