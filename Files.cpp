@@ -72,10 +72,10 @@ void generateFile(const string& fileName, const int& number)
 
 	outfile.close();
 
+	cout << "----------------------------------------------------" << endl;
 	cout << "Failas " << fileName << " uzdarytas" << endl;
-
+	cout << "     " << endl;
 	cout << "Failo generavimas uztruko: " << t.elapsed() << " s\n";
-
 }
 
 void outputFile(vector<Stud>& stud)
@@ -92,7 +92,7 @@ void outputFile(vector<Stud>& stud)
 	}
 }
 
-void outputFile(const string& fileName, vector<Stud>& stud)
+void outputInFile(const string& fileName, vector<Stud>& stud)
 {
 	Timer t; 
 
