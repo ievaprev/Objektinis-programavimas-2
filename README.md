@@ -42,8 +42,8 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo nuskaitymas | 0.0119399 s |
 | Failo grupavimas  | 0.0007996875 s |
 | Failo rušiavimas  | 0.00033085 s |
-| Studentų išvedimas į smart filą | 0.0131175875 s |
-| Studentų išvedimas į dumb filą | 0.0068510375 s |
+| Studentų išvedimas į smart failą | 0.0131175875 s |
+| Studentų išvedimas į dumb failą | 0.0068510375 s |
 
 **Failas: Studentai 10000**
 | VEIKSMAS | VYKDYMO VIDURKIS|
@@ -52,8 +52,8 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo nuskaitymas | 0.085952525 s |
 | Failo grupavimas  | 0.0087121875 s |
 | Failo rušiavimas  | 0.0053023875 s |
-| Studentų išvedimas į smart filą | 0.1233054125 s |
-| Studentų išvedimas į dumb filą | 0.0394200375 s |
+| Studentų išvedimas į smart failą | 0.1233054125 s |
+| Studentų išvedimas į dumb failą | 0.0394200375 s |
 
 **Failas: Studentai 100000**
 | VEIKSMAS | VYKDYMO VIDURKIS |
@@ -62,8 +62,8 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo nuskaitymas | 0.751953875 s |
 | Failo grupavimas  | 0.0603202 s |
 | Failo rušiavimas  | 0.0599166875 s |
-| Studentų išvedimas į smart filą | 0.6579435 s |
-| Studentų išvedimas į dumb filą | 0.286801875 s |
+| Studentų išvedimas į smart failą | 0.6579435 s |
+| Studentų išvedimas į dumb failą | 0.286801875 s |
 
 **Failas: Studentai 1000000**
 | VEIKSMAS | VYKDYMO VIDURKIS |
@@ -72,8 +72,8 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo nuskaitymas | 8.2884075 s |
 | Failo grupavimas  | 0.851942625 s |
 | Failo rušiavimas  | 0.71661653 s |
-| Studentų išvedimas į smart filą | 5.7939675 s |
-| Studentų išvedimas į dumb filą | 2.55361375 s|
+| Studentų išvedimas į smart failą | 5.7939675 s |
+| Studentų išvedimas į dumb failą | 2.55361375 s|
 
 **Failas: Studentai 10000000**
 | VEIKSMAS | VYKDYMO VIDURKIS|
@@ -82,5 +82,5 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo nuskaitymas | 73.1526125 s |
 | Failo grupavimas  | 5.68810375 s |
 | Failo rušiavimas  | 6.61167625 s |
-| Studentų išvedimas į smart filą | 45.11 s |
-| Studentų išvedimas į dumb filą | 30.118645 s |
+| Studentų išvedimas į smart failą | 45.11 s |
+| Studentų išvedimas į dumb failą | 30.118645 s |
