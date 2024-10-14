@@ -8,21 +8,23 @@
 #include<cstdlib>
 #include<fstream>
 #include<sstream> 
-#include <stdexcept>
-#include <exception>
+#include<stdexcept>
+#include<exception>
+
 
 using std::endl;
 using std::cout;
 using std::cin;
 using std::left;
 using std::right;
-using std::setw; //isvedamo zodzio plotis
+using std::setw;
 using std::setprecision;
 using std::fixed;
 using std::sort;
 using std::getline;
 using std::streamsize;
 using std::ifstream;
+using std::ofstream;
 using std::numeric_limits;
 using std::string;
 using std::vector;
@@ -32,3 +34,5 @@ using std::cerr;
 using std::exception;
 using std::invalid_argument;
 using std::out_of_range;
+using std::noskipws;
+using std::to_string;
