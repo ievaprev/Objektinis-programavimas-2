@@ -48,20 +48,6 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 	cout << "Failo nuskaitymas uztruko: " << r.elapsed() << " s\n";
 }
 
-void outputFile(vector<Stud>& stud)
-{
-	sort(stud.begin(), stud.end(), [](const Stud& a, const Stud& b) {
-		return a.vardas < b.vardas;
-		});
-
-	for (Stud& duom : stud)
-	{
-		cout << setw(18) << left << duom.pavarde << setw(15) << left << duom.vardas
-			<< setw(3) << right << fixed << setprecision(2) << duom.vid << "                "
-			<< setw(3) << right << fixed << setprecision(2) << duom.med << endl;
-	}
-}
-
 void generateFile(const string& fileName, const int& number)
 {
 	Timer t;
@@ -90,4 +76,35 @@ void generateFile(const string& fileName, const int& number)
 
 	cout << "Failo generavimas uztruko: " << t.elapsed() << " s\n";
 
+}
+
+void outputFile(vector<Stud>& stud)
+{
+	sort(stud.begin(), stud.end(), [](const Stud& a, const Stud& b) {
+		return a.vardas < b.vardas;
+		});
+
+	for (Stud& duom : stud)
+	{
+		cout << setw(18) << left << duom.pavarde << setw(15) << left << duom.vardas
+			<< setw(3) << right << fixed << setprecision(2) << duom.vid << "                "
+			<< setw(3) << right << fixed << setprecision(2) << duom.med << endl;
+	}
+}
+
+void outputFile(const string& fileName, vector<Stud>& stud)
+{
+	Timer t; 
+
+	ofstream outfile(fileName);
+
+	for (Stud& duom : stud)
+	{
+		outfile << setw(18) << left << duom.pavarde << setw(15) << left << duom.vardas
+			<< setw(3) << right << fixed << setprecision(2) << duom.vid;
+	}
+
+	outfile.close();
+
+	cout << "Failo generavimas uztruko: " << t.elapsed() << " s\n";
 }
