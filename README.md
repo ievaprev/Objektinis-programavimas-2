@@ -38,27 +38,24 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 **Failas: Studentai 1000**
 | VEIKSMAS | VYKDYMO VIDURKIS|
 | --- | --- |
-| Failo generavimas | 0.0316442625 s |
-| Failo nuskaitymas | 0.0119399 s |
-| Failo grupavimas  | 0.0007996875 s |
-| Failo rušiavimas  | 0.00033085 s |
-| Studentų išvedimas į smart failą | 0.0131175875 s |
-| Studentų išvedimas į dumb failą | 0.0068510375 s |
+| Failo nuskaitymas | 0.0159676167 s |
+| Failo grupavimas  | 0.0019471667 s |
+| Failo rušiavimas  | 0.0002987667 s |
+| Studentų išvedimas į smart failą | 0.0030953833 s |
+| Studentų išvedimas į dumb failą | 0.00191965 s |
 
 **Failas: Studentai 10000**
 | VEIKSMAS | VYKDYMO VIDURKIS|
 | --- | --- |
-| Failo generavimas | 0.2257875 s  |
-| Failo nuskaitymas | 0.085952525 s |
-| Failo grupavimas  | 0.0087121875 s |
-| Failo rušiavimas  | 0.0053023875 s |
-| Studentų išvedimas į smart failą | 0.1233054125 s |
-| Studentų išvedimas į dumb failą | 0.0394200375 s |
+| Failo nuskaitymas | 0.0985081333 s |
+| Failo grupavimas  | 0.0076673167 s |
+| Failo rušiavimas  | 0.0052359 s |
+| Studentų išvedimas į smart failą | 0.0130139 s |
+| Studentų išvedimas į dumb failą | 0.0099617833 s |
 
 **Failas: Studentai 100000**
 | VEIKSMAS | VYKDYMO VIDURKIS |
 | --- | --- |
-| Failo generavimas | 1.506655 s |
 | Failo nuskaitymas | 0.751953875 s |
 | Failo grupavimas  | 0.0603202 s |
 | Failo rušiavimas  | 0.0599166875 s |
@@ -68,7 +65,6 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 **Failas: Studentai 1000000**
 | VEIKSMAS | VYKDYMO VIDURKIS |
 | --- | --- |
-| Failo generavimas | 14.8723125 s |
 | Failo nuskaitymas | 8.2884075 s |
 | Failo grupavimas  | 0.851942625 s |
 | Failo rušiavimas  | 0.71661653 s |
@@ -78,7 +74,6 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 **Failas: Studentai 10000000**
 | VEIKSMAS | VYKDYMO VIDURKIS|
 | --- | --- |
-| Failo generavimas | 121.4220625 s |
 | Failo nuskaitymas | 73.1526125 s |
 | Failo grupavimas  | 5.68810375 s |
 | Failo rušiavimas  | 6.61167625 s |
