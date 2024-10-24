@@ -59,8 +59,8 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo nuskaitymas | 0.751953875 s |
 | Failo grupavimas  | 0.0603202 s |
 | Failo rušiavimas  | 0.0599166875 s |
-| Studentų išvedimas į smart failą | 0.6579435 s |
-| Studentų išvedimas į dumb failą | 0.286801875 s |
+| Studentų išvedimas į smart failą | 0.1135195 s |
+| Studentų išvedimas į dumb failą | 0.0726314667 s |
 
 **Failas: Studentai 1000000**
 | VEIKSMAS | VYKDYMO VIDURKIS |
@@ -68,8 +68,8 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo nuskaitymas | 8.2884075 s |
 | Failo grupavimas  | 0.851942625 s |
 | Failo rušiavimas  | 0.71661653 s |
-| Studentų išvedimas į smart failą | 5.7939675 s |
-| Studentų išvedimas į dumb failą | 2.55361375 s|
+| Studentų išvedimas į smart failą | 1.0000588167 s |
+| Studentų išvedimas į dumb failą | 0.6644465 s|
 
 **Failas: Studentai 10000000**
 | VEIKSMAS | VYKDYMO VIDURKIS|
@@ -77,5 +77,5 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo nuskaitymas | 73.1526125 s |
 | Failo grupavimas  | 5.68810375 s |
 | Failo rušiavimas  | 6.61167625 s |
-| Studentų išvedimas į smart failą | 45.11 s |
-| Studentų išvedimas į dumb failą | 30.118645 s |
+| Studentų išvedimas į smart failą | 10.1445716667 s |
+| Studentų išvedimas į dumb failą | 7.6079633333 s |
