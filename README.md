@@ -1,5 +1,6 @@
 # Objektinis-programavimas
-**Programos aprašymas:** programa, kuri leidžia vartotojui suvesti arba nuskaityti duomenis apie studenta(vardą, pavardę, namų darbų rezultatus, egzamino rezultatus). Apskaičiuoja studentų galutinius rezultatus paga formulę: Galutinis = 0.4 x namų darbų rezultatai + 0.6 x egzamino įvertinimas. <br />
+## Programos aprašymas <br/>
+Programa, kuri leidžia vartotojui suvesti arba nuskaityti duomenis apie studenta(vardą, pavardę, namų darbų rezultatus, egzamino rezultatus). Apskaičiuoja studentų galutinius rezultatus paga formulę: Galutinis = 0.4 x namų darbų rezultatai + 0.6 x egzamino įvertinimas. <br />
 *Namų darbų rezultatai - vartotojui leidžiama pasirinkti ar namų darbų rezultatus skaičiuoti su mediana ar gauti jų vidurkį.*<br/>
 <br/>
 
@@ -32,55 +33,55 @@
 * Norint įvesti namų darbų ar egzamino pažymį vartotojas yra apribojamas sveikaisiais skaičiais nuo 1 iki 10
 * Nuskaitant failą yra tikrinama ar failas atsidaro, ar nuskaitytoje eilutėje yra namų darbų įrašai ir ar įrašyti namų darbų duomenys atitinka nustatytus standartus(sveikieji skaičiai nuo 1 iki 10 ir ar nėra įrašyta raidė). Pasitaikius išimčiai išmetama atitinkama klaida.
 
-**Laiko matavimas** <br/>
-Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **8** kartus ir iš gautų laikų buvo išvestas vidurkis. Žemiau pateikta kiekvieno failo testavimo rezultatai.
+## Programos testavimas <br/>
+Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **8** kartus ir iš gautų programos veikimo laikų buvo išvestas vidurkis. Žemiau pateikta kiekvieno failo testavimo rezultatai.
 
 **Kompiuterio su kuriuo buvo atliekami testai specifikacijos:**
 * CPU: Intel(R) Core(TM) Ultra 7 155H **3.80 GHz**
 * RAM: 16 GB
-* HDD: 
+* SDD: 1 TB
   
 **Failas: Studentai 1000**
-| VEIKSMAS | VYKDYMO VIDURKIS|
-| --- | --- |
-| Failo nuskaitymas | 0.0159676167 s |
-| Failo grupavimas  | 0.0019471667 s |
-| Failo rušiavimas  | 0.0002987667 s |
-| Studentų išvedimas į smart failą | 0.0030953833 s |
-| Studentų išvedimas į dumb failą | 0.00191965 s |
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas | 0.0159676167 s | |
+| Failo grupavimas  | 0.0019471667 s | |
+| Failo rušiavimas  | 0.0002987667 s | |
+| Studentų išvedimas į smart failą | 0.0030953833 s | |
+| Studentų išvedimas į dumb failą | 0.00191965 s | |
 
 **Failas: Studentai 10000**
-| VEIKSMAS | VYKDYMO VIDURKIS|
-| --- | --- |
-| Failo nuskaitymas | 0.0985081333 s |
-| Failo grupavimas  | 0.0076673167 s |
-| Failo rušiavimas  | 0.0052359 s |
-| Studentų išvedimas į smart failą | 0.0130139 s |
-| Studentų išvedimas į dumb failą | 0.0099617833 s |
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas | 0.0985081333 s | |
+| Failo grupavimas  | 0.0076673167 s | |
+| Failo rušiavimas  | 0.0052359 s | |
+| Studentų išvedimas į smart failą | 0.0130139 s | |
+| Studentų išvedimas į dumb failą | 0.0099617833 s | |
 
 **Failas: Studentai 100000**
-| VEIKSMAS | VYKDYMO VIDURKIS |
-| --- | --- |
-| Failo nuskaitymas | 0.751953875 s |
-| Failo grupavimas  | 0.0603202 s |
-| Failo rušiavimas  | 0.0599166875 s |
-| Studentų išvedimas į smart failą | 0.1135195 s |
-| Studentų išvedimas į dumb failą | 0.0726314667 s |
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas | 0.751953875 s | |
+| Failo grupavimas  | 0.0603202 s | |
+| Failo rušiavimas  | 0.0599166875 s | |
+| Studentų išvedimas į smart failą | 0.1135195 s | |
+| Studentų išvedimas į dumb failą | 0.0726314667 s | |
 
 **Failas: Studentai 1000000**
-| VEIKSMAS | VYKDYMO VIDURKIS |
-| --- | --- |
-| Failo nuskaitymas | 8.2884075 s |
-| Failo grupavimas  | 0.851942625 s |
-| Failo rušiavimas  | 0.71661653 s |
-| Studentų išvedimas į smart failą | 1.0000588167 s |
-| Studentų išvedimas į dumb failą | 0.6644465 s|
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas | 8.2884075 s | |
+| Failo grupavimas  | 0.851942625 s | |
+| Failo rušiavimas  | 0.71661653 s | |
+| Studentų išvedimas į smart failą | 1.0000588167 s | |
+| Studentų išvedimas į dumb failą | 0.6644465 s| |
 
 **Failas: Studentai 10000000**
-| VEIKSMAS | VYKDYMO VIDURKIS|
-| --- | --- |
-| Failo nuskaitymas | 73.1526125 s |
-| Failo grupavimas  | 5.68810375 s |
-| Failo rušiavimas  | 6.61167625 s |
-| Studentų išvedimas į smart failą | 10.1445716667 s |
-| Studentų išvedimas į dumb failą | 7.6079633333 s |
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas | 73.1526125 s | |
+| Failo grupavimas  | 5.68810375 s | | 
+| Failo rušiavimas  | 6.61167625 s | | 
+| Studentų išvedimas į smart failą | 10.1445716667 s | |
+| Studentų išvedimas į dumb failą | 7.6079633333 s | |
