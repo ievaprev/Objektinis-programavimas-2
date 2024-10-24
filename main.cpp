@@ -7,6 +7,7 @@ int main()
     vector<Stud> Vec1;
     vector<Stud> smart, dumb; 
     Stud Temp;
+    
     cout << "Ar norite nuskaityti informacija is tekstinio failo? (0 - taip, 1 - ne)" << endl;
     int textAts;
     string textFile; 
@@ -32,7 +33,7 @@ int main()
     }
 
     if (textAts == 0) {
-        cout << "Ar norite sugeneruoti failus? (0 - taip, 1 - ne)" << endl;
+        cout << "Ar norite sugeneruoti naujus failus? (0 - taip, 1 - ne)" << endl;
         int genrAts;
         while (true) {
             try {
@@ -54,66 +55,98 @@ int main()
         }
 
         if (genrAts == 0) {
+            
             int b = 1000;
 
             for (int i = 0; i < 5; i++)
             {
                 generateFile("studentai" + to_string(b) + ".txt", b);
-                readFile("studentai" + to_string(b) + ".txt", Vec1);
-
-                Timer t;
-                for (Stud& Temp : Vec1) {
-                    grouping(smart, dumb, Temp);
-                }
-                cout << "Studentu grupavimas uztruko: " << t.elapsed() << " s\n";
-
-                cout << "    " << endl;
-
-                cout << "Pasirinkite pagal ka noretumete rusiuoti sugrupuotus studentus:\n1 - varda, 2 - pavarde, 3 - galutini rezultata maz., 4 - galutini rezultata did." << endl;
-                int ats;
-                while (true) {
-                    try {
-                        if (!(cin >> ats)) {
-                            cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                            throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
-                        }
-
-                        if (ats != 1 && ats != 2 && ats != 3 && ats != 4) {
-                            throw runtime_error("Klaida: prasome pasirinkti viena is 4 variantu.");
-                        }
-                        break;
-                    }
-                    catch (const exception& e) {
-                        cerr << e.what() << endl;
-                    }
-                }
-
-                sort(smart, dumb, ats);
-                cout << "   " << endl;
-
-                outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
-                outputInFile("Dumb studentai" + to_string(b) + ".txt", dumb);
-
                 b *= 10;
-                system("pause");
             }
             
         }
         else {
-            cout << "Pateikite failo varda: " << endl;
-            cin >> textFile;
-            readFile(textFile, Vec1);
+           
+            int ats;
+            cout << "Ar norite nuskaityti generuotus failus ar savo turimus?(0 - generuotus, 1 - turimus)" << endl;
+            while (true) {
+                try {
+                    if (!(cin >> ats)) {
+                        cin.clear();
+                        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                        throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
+                    }
 
-            cout << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas" 
-            << setw(10) << right << "Galutinis (Vid.)" << "    "
-            << setw(10) << right << "Galutinis (Med.)" << endl;
-
-            for (Stud& student : Vec1) {
-                finalgrade(student);
+                    if (ats != 0 && ats != 1) {
+                        throw runtime_error("Klaida: prasome pasirinkti viena is 4 variantu.");
+                    }
+                    break;
+                }
+                catch (const exception& e) {
+                    cerr << e.what() << endl;
+                }
             }
-            outputFile(Vec1);
+            if (ats == 0) {
 
+                int b = 1000;
+
+                for (int i = 0; i < 5; i++) {
+                    cout << "----------------------------------" << endl;
+
+                    readFile("studentai" + to_string(b) + ".txt", Vec1);
+
+                    Timer t;
+                    for (Stud& Temp : Vec1) {
+                        grouping(smart, dumb, Temp);
+                    }
+                    cout << "Studentu grupavimas uztruko: " << t.elapsed() << " s\n";
+
+                    cout << "    " << endl;
+
+                    cout << "Pasirinkite pagal ka noretumete rusiuoti sugrupuotus studentus:\n1 - varda, 2 - pavarde, 3 - galutini rezultata maz., 4 - galutini rezultata did." << endl;
+                    int ats;
+                    while (true) {
+                        try {
+                            if (!(cin >> ats)) {
+                                cin.clear();
+                                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                                throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
+                            }
+
+                            if (ats != 1 && ats != 2 && ats != 3 && ats != 4) {
+                                throw runtime_error("Klaida: prasome pasirinkti viena is 4 variantu.");
+                            }
+                            break;
+                        }
+                        catch (const exception& e) {
+                            cerr << e.what() << endl;
+                        }
+                    }
+
+                    sort(smart, dumb, ats);
+                    cout << "   " << endl;
+
+                    outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
+                    outputInFile("Dumb studentai" + to_string(b) + ".txt", dumb);
+
+                    b *= 10;
+                    system("pause");
+                }
+
+            }
+            else {
+                cout << "Pateikite failo varda: " << endl;
+                cin >> textFile;
+                readFile(textFile, Vec1);
+
+                cout << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas" 
+                << setw(10) << right << "Galutinis (Vid.)" << "    "
+                << setw(10) << right << "Galutinis (Med.)" << endl;
+                for (Stud& student : Vec1) {
+                    finalgrade(student);
+                }
+                outputFile(Vec1);
+            }
         }
     }
     else if (textAts == 1) {
@@ -177,4 +210,3 @@ int main()
         }
     }
 }
-
