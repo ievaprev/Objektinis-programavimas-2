@@ -5,6 +5,9 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 
 	Timer r;
 	ifstream inFile(fileName);
+
+	stud.reserve(10000);
+
 	try {
 		if (!inFile.is_open()) {
 			throw runtime_error("Error: unable to open file: " + fileName);
@@ -45,32 +48,37 @@ void readFile(const string& fileName, vector <Stud>& stud) {
 		cerr << e.what() << endl;
 		exit(EXIT_FAILURE);
 	}
-	cout << "Failo nuskaitymas uztruko: " << r.elapsed() << " s\n";
+
+	cout << "Failo " << fileName <<" nuskaitymas uztruko : " << r.elapsed() << " s\n";
 }
 
 
 void generateFile(const string& fileName, const int& number)
 {
 	Timer t;
-	ofstream outfile(fileName);
 
+	stringstream input; 
+	
 	//header line
-	outfile << setw(18) << left << "Studento vardas" << setw(18) << left << "Pavarde";
+	input << setw(18) << left << "Studento vardas" << setw(18) << left << "Pavarde";
 	for (int i = 1; i <= 15; i++) {
-		outfile << setw(6) << right << "ND" + to_string(i);
+		input << setw(6) << right << "ND" + to_string(i);
 	}
-	outfile << setw(15) << right << "Egzamino rez" << endl;
+	input << setw(15) << right << "Egzamino rez" << endl;
 
 	//student data
 	for (int i = 1; i <= number; i++)
 	{
-		outfile << setw(18) << left << "Vardas" + to_string(i) << setw(18) << left << "Pavarde" + to_string(i);
+		input << setw(18) << left << "Vardas" + to_string(i) << setw(18) << left << "Pavarde" + to_string(i);
 		for (int j = 0; j < 15; j++) {
-			outfile << setw(6) << right << (rand() % 10) + 1;
+			input << setw(6) << right << (rand() % 10) + 1;
 		}
-		outfile << setw(15) << right << (rand() % 10) + 1 << endl;
+		input << setw(15) << right << (rand() % 10) + 1 << endl;
 	}
 
+	ofstream outfile(fileName);
+	outfile << input.str();
+	outfile.flush();
 	outfile.close();
 
 	cout << "----------------------------------------------------" << endl;
@@ -100,19 +108,22 @@ void outputFile(vector<Stud>& stud)
 void outputInFile(const string& fileName, vector<Stud>& stud)
 {
 	Timer t; 
+	stringstream input;
+	
 
-	ofstream outfile(fileName);
-
-	outfile << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas"
+	input << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas"
 		<< setw(10) << right << "Galutinis (Vid.)" << endl;
 
 
 	for (Stud& duom : stud)
 	{
-		outfile << setw(18) << left << duom.pavarde << setw(15) << left << duom.vardas
+		input << setw(18) << left << duom.pavarde << setw(15) << left << duom.vardas
 			<< setw(3) << right << fixed << setprecision(2) << duom.vid << endl;
 	}
 
+	ofstream outfile(fileName);
+	outfile << input.str();
+	outfile.flush();
 	outfile.close();
 
 	cout << "Suskirstytu studentu irasymas i " << fileName << " faila utruko: " << t.elapsed() << " s\n";
