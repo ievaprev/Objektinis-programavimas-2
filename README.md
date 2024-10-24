@@ -35,6 +35,11 @@
 **Laiko matavimas** <br/>
 Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **8** kartus ir iš gautų laikų buvo išvestas vidurkis. Žemiau pateikta kiekvieno failo testavimo rezultatai.
 
+**Kompiuterio su kuriuo buvo atliekami testai specifikacijos:**
+* CPU: Intel(R) Core(TM) Ultra 7 155H **3.80 GHz**
+* RAM: 16 GB
+* HDD: 
+  
 **Failas: Studentai 1000**
 | VEIKSMAS | VYKDYMO VIDURKIS|
 | --- | --- |
