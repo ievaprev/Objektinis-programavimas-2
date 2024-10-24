@@ -36,3 +36,5 @@ using std::invalid_argument;
 using std::out_of_range;
 using std::noskipws;
 using std::to_string;
+using std::flush;
+using std::stringstream;
