@@ -41,7 +41,7 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 * RAM: 16 GB
 * SDD: 1 TB
   
-**Failas: Studentai 1000**
+### Failas: Studentai 1000
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
 | Failo nuskaitymas | 0.0159676167 s | 0.0123800667 s |
@@ -49,8 +49,12 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo rušiavimas  | 0.0002987667 s | 0.0004841333 s |
 | Studentų išvedimas į smart failą | 0.0030953833 s | 0.0031049833 s |
 | Studentų išvedimas į dumb failą | 0.00191965 s | 0.0015635833 s |
+</br>
+<img src="https://github.com/user-attachments/assets/eccc11f9-8d10-4f0f-ba1e-778801e60b96" alt="Description" width="500"/>
 
-**Failas: Studentai 10000**
+----------------------
+
+### Failas: Studentai 10000
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
 | Failo nuskaitymas | 0.0985081333 s | 0.1000360667 s |
@@ -58,8 +62,12 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo rušiavimas  | 0.0052359 s | 0.0018065333 s |
 | Studentų išvedimas į smart failą | 0.0130139 s | 0.0126294 s |
 | Studentų išvedimas į dumb failą | 0.0099617833 s | 0.0105311167 s |
+</br>
+<img src="https://github.com/user-attachments/assets/63142280-c428-4fac-8e0e-f90954c2518b" alt="Description" width="500"/>
 
-**Failas: Studentai 100000**
+----------------------
+
+### Failas: Studentai 100000
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
 | Failo nuskaitymas | 0.751953875 s | 0.7902695 s |
@@ -67,8 +75,12 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo rušiavimas  | 0.0599166875 s | 0.0301281833 s |
 | Studentų išvedimas į smart failą | 0.1135195 s | 0.0991398333 s |
 | Studentų išvedimas į dumb failą | 0.0726314667 s | 0.0760664 s |
+</br>
+<img src="https://github.com/user-attachments/assets/eccc11f9-8d10-4f0f-ba1e-778801e60b96" alt="Description" width="500"/>
 
-**Failas: Studentai 1000000**
+----------------------
+
+### Failas: Studentai 1000000
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
 | Failo nuskaitymas | 8.2884075 s | 8.067803333 s |
@@ -76,8 +88,12 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo rušiavimas  | 0.71661653 s | 0.3381395 s |
 | Studentų išvedimas į smart failą | 1.0000588167 s | 0.822413 s |
 | Studentų išvedimas į dumb failą | 0.6644465 s | 0.5990218333 s |
+</br>
+<img src="https://github.com/user-attachments/assets/eccc11f9-8d10-4f0f-ba1e-778801e60b96" alt="Description" width="500"/>
 
-**Failas: Studentai 10000000**
+----------------------
+
+### Failas: Studentai 10000000
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
 | Failo nuskaitymas | 85.1526125 s | 82.4037 s |
