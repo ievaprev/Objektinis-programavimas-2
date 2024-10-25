@@ -103,3 +103,9 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Studentų išvedimas į dumb failą | 7.6079633333 s | 7.146921 s |
 </br>
 <img src="https://github.com/user-attachments/assets/a41b041b-e72d-440e-ae99-5e3d2833e364" alt="Description" width="500"/>
+
+## Testavimo išvados
+Buvo testuojama programa naudojant dvi skirtingas struktūras: std::vector ir std::list. Programos veikimo laikai buvo lyginami. </br>
+**Galima padaryti išvadas:**
+* Lyginant vector ir list, programa sparčiau veikia, tačiau pokyčiai yra neženklūs. Atsižvelgiant į skaičius, didesnius pokyčius galime pastebėti tik didesniuose duomenų failuose.
+* List yra labiau tinkamas naudoti su dideliais duomenų kiekiais, priešingai negu vector, kuris geriau veikia mažesnio duomenų kiekio failuose. 
