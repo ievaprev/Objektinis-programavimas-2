@@ -1,12 +1,11 @@
 #include "Stud.h"
 #include "Timer.h"
 
-void readFile(const string& fileName, vector <Stud>& stud) {
+void readFile(const string& fileName, list <Stud>& stud) {
 
 	Timer r;
 	ifstream inFile(fileName);
 
-	stud.reserve(10000);
 
 	try {
 		if (!inFile.is_open()) {
@@ -77,6 +76,12 @@ void generateFile(const string& fileName, const int& number)
 	}
 
 	ofstream outfile(fileName);
+
+	if (!outfile.is_open()) {
+		cerr << "Error: unable to open file: " << fileName << endl;
+		return; 
+	}
+
 	outfile << input.str();
 	outfile.flush();
 	outfile.close();
@@ -91,11 +96,9 @@ void generateFile(const string& fileName, const int& number)
 
 }
 
-void outputFile(vector<Stud>& stud)
+void outputFile(list<Stud>& stud)
 {
-	sort(stud.begin(), stud.end(), [](const Stud& a, const Stud& b) {
-		return a.vardas < b.vardas;
-		});
+	stud.sort(sortByName);
 
 	for (Stud& duom : stud)
 	{
@@ -105,7 +108,7 @@ void outputFile(vector<Stud>& stud)
 	}
 }
 
-void outputInFile(const string& fileName, vector<Stud>& stud)
+void outputInFile(const string& fileName, list<Stud>& stud)
 {
 	Timer t; 
 	stringstream input;
