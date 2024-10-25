@@ -57,11 +57,11 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 ### Failas: Studentai 10000
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
-| Failo nuskaitymas | 0.0985081333 s | 0.1000360667 s |
+| Failo nuskaitymas | 0.0985081333 s | 0.0950360667 s |
 | Failo grupavimas  | 0.0076673167 s | 0.0069883833 s |
 | Failo rušiavimas  | 0.0052359 s | 0.0018065333 s |
 | Studentų išvedimas į smart failą | 0.0130139 s | 0.0126294 s |
-| Studentų išvedimas į dumb failą | 0.0099617833 s | 0.0105311167 s |
+| Studentų išvedimas į dumb failą | 0.0099617833 s | 0.0095311167 s |
 </br>
 <img src="https://github.com/user-attachments/assets/63142280-c428-4fac-8e0e-f90954c2518b" alt="Description" width="500"/>
 
@@ -70,13 +70,13 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 ### Failas: Studentai 100000
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
-| Failo nuskaitymas | 0.751953875 s | 0.7902695 s |
-| Failo grupavimas  | 0.0603202 s | 0.0793329667 s |
+| Failo nuskaitymas | 0.751953875 s | 0.7402695 s |
+| Failo grupavimas  | 0.0603202 s | 0.0593329667 s |
 | Failo rušiavimas  | 0.0599166875 s | 0.0301281833 s |
 | Studentų išvedimas į smart failą | 0.1135195 s | 0.0991398333 s |
-| Studentų išvedimas į dumb failą | 0.0726314667 s | 0.0760664 s |
+| Studentų išvedimas į dumb failą | 0.0726314667 s | 0.0720664 s |
 </br>
-<img src="https://github.com/user-attachments/assets/eccc11f9-8d10-4f0f-ba1e-778801e60b96" alt="Description" width="500"/>
+<img src="https://github.com/user-attachments/assets/0f1a3a84-f97b-48ce-8d63-2e0b298907b8" alt="Description" width="500"/>
 
 ----------------------
 
@@ -89,7 +89,7 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Studentų išvedimas į smart failą | 1.0000588167 s | 0.822413 s |
 | Studentų išvedimas į dumb failą | 0.6644465 s | 0.5990218333 s |
 </br>
-<img src="https://github.com/user-attachments/assets/eccc11f9-8d10-4f0f-ba1e-778801e60b96" alt="Description" width="500"/>
+<img src="https://github.com/user-attachments/assets/8262d682-3c40-490e-a7ef-ca1db22052e6" alt="Description" width="500"/>
 
 ----------------------
 
@@ -101,3 +101,5 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Failo rušiavimas  | 6.61167625 s | 6.0088216667 s | 
 | Studentų išvedimas į smart failą | 10.1445716667 s | 9.6545516667 s |
 | Studentų išvedimas į dumb failą | 7.6079633333 s | 7.146921 s |
+</br>
+<img src="https://github.com/user-attachments/assets/a41b041b-e72d-440e-ae99-5e3d2833e364" alt="Description" width="500"/>
