@@ -2,6 +2,7 @@
 #include<iomanip>
 #include<string>
 #include<vector>
+#include<list>
 #include<algorithm>
 #include<limits> 
 #include<ios>
@@ -11,7 +12,7 @@
 #include<stdexcept>
 #include<exception>
 
-
+using std::list;
 using std::endl;
 using std::cout;
 using std::cin;
@@ -38,3 +39,4 @@ using std::noskipws;
 using std::to_string;
 using std::flush;
 using std::stringstream;
+using std::sort;
