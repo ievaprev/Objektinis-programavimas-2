@@ -16,7 +16,7 @@ void ived(Stud &Lok)
 			}
 
 			if (gchoice != 0 && gchoice != 1) {
-				throw runtime_error("Klaida: prasome pasirinkti 0 - taip arba 1 - mne.");
+				throw runtime_error("Klaida: prasome pasirinkti 0 - taip arba 1 - ne.");
 			}
 
 			break;
@@ -91,16 +91,19 @@ void ived(Stud &Lok)
 	}
 }
 
-void outputMean(Stud &Lok)
+void outputMean(list<Stud>& stud)
 {
-	cout << setw(18) << left << Lok.vardas << setw(15) << left << Lok.pavarde 
-		<< setw(3) << right << fixed << setprecision(2) << Lok.vid << endl;
+	for(const Stud& student : stud)
+		cout << setw(18) << left << student.vardas << setw(15) << left << student.pavarde 
+		<< setw(15) << left << fixed << setprecision(2) << student.vid << setw(15) << left << &stud << endl;
 }
 
-void outputMedian(Stud& Lok)
+void outputMedian(list<Stud>& stud)
 {
-	cout << setw(18) << left << Lok.vardas << setw(15) << left << Lok.pavarde
-		<< setw(3) << right << fixed << setprecision(2) << Lok.med<< endl;
+	for (const Stud& student : stud)
+		cout << setw(18) << left << student.vardas << setw(15) << left << student.pavarde
+		<< setw(15) << left << fixed << setprecision(2) << student.med << setw(15) << left << &stud << endl;
+
 }
 	
 
@@ -150,7 +153,7 @@ double mean(const vector <int>& ND)
 	return vidurkis;
 }
 
-void grouping(vector<Stud>& smart, vector<Stud>& dumb, Stud& Lok)
+void grouping(list<Stud>& smart, list<Stud>& dumb, Stud& Lok)
 {
 	finalgrade(Lok);
 	if (Lok.vid >= 5.0) {
@@ -160,33 +163,32 @@ void grouping(vector<Stud>& smart, vector<Stud>& dumb, Stud& Lok)
 		dumb.push_back(Lok);
 	}
 }
-
-void sort(vector<Stud>& smart, vector<Stud>& dumb, const int& choice) {
+bool sortByName(Stud& a, Stud& b) {
+	return a.vardas < b.vardas;
+}
+bool sortBySurname(Stud& a, Stud& b) {
+	return a.pavarde < b.pavarde;
+}
+bool sortDecending(Stud& a, Stud& b) {
+	return a.vid > b.vid;
+}
+bool sortAscending(Stud& a, Stud& b) {
+	return a.vid < b.vid;
+}
+void sortByChoice(list<Stud>& stud, const int& choice) {
 	Timer t;
 
 	if (choice == 1) {
-		sort(smart.begin(), smart.end(), [](const Stud& a, const Stud& b) {
-			return a.vardas < b.vardas;});
-		sort(dumb.begin(), dumb.end(), [](const Stud& a, const Stud& b) {
-			return a.vardas < b.vardas;});	
+		stud.sort(sortByName);
 	}
 	else if (choice == 2) {
-		sort(smart.begin(), smart.end(), [](const Stud& a, const Stud& b) {
-			return a.pavarde < b.pavarde; });
-		sort(dumb.begin(), dumb.end(), [](const Stud& a, const Stud& b) {
-			return a.pavarde < b.pavarde; });
+		stud.sort(sortBySurname);
 	}
 	else if (choice == 3) {
-		sort(smart.begin(), smart.end(), [](const Stud& a, const Stud& b) {
-			return a.vid > b.vid; });
-		sort(dumb.begin(), dumb.end(), [](const Stud& a, const Stud& b) {
-			return a.vid > b.vid; });
+		stud.sort(sortDecending);
 	}
 	else if (choice == 4) {
-		sort(smart.begin(), smart.end(), [](const Stud& a, const Stud& b) {
-			return a.vid < b.vid; });
-		sort(dumb.begin(), dumb.end(), [](const Stud& a, const Stud& b) {
-			return a.vid < b.vid; });
+		stud.sort(sortAscending);
 	}
 
 	cout << "Surikiuoti studentus, pagal jusu pasirinkima, uztruko: " << t.elapsed() << " s\n" << endl;
