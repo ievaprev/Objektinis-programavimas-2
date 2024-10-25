@@ -2,14 +2,24 @@
 #include "Stud.h"
 #include "Timer.h"
 
-int main()
-{
-    vector<Stud> Vec1;
-    vector<Stud> smart, dumb; 
+int main(){
+
+    list<Stud> List1;
+    list<Stud> smart, dumb; 
     Stud Temp;
-    
+
+    /*
+    textAts - the choice of whether you want to read information from a file or not
+    genrAts - the choice of whether you want to generate new files or not
+    whichAts - the choice of the files the user want to read information from
+    sortAts - the choice of how the user wants to sort users
+    n - number of students
+    finalChoice - the choice of how the user wants to present final grade
+    */
+    int textAts, genrAts, whichAts, sortAts, n, finalChoice;
+
     cout << "Ar norite nuskaityti informacija is tekstinio failo? (0 - taip, 1 - ne)" << endl;
-    int textAts;
+    
     string textFile; 
 
     while (true) {
@@ -34,7 +44,7 @@ int main()
 
     if (textAts == 0) {
         cout << "Ar norite sugeneruoti naujus failus? (0 - taip, 1 - ne)" << endl;
-        int genrAts;
+    
         while (true) {
             try {
                 if (!(cin >> genrAts)) {
@@ -67,17 +77,17 @@ int main()
         }
         else {
            
-            int ats;
             cout << "Ar norite nuskaityti generuotus failus ar savo turimus?(0 - generuotus, 1 - turimus)" << endl;
+
             while (true) {
                 try {
-                    if (!(cin >> ats)) {
+                    if (!(cin >> whichAts)) {
                         cin.clear();
                         cin.ignore(numeric_limits<streamsize>::max(), '\n');
                         throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
                     }
 
-                    if (ats != 0 && ats != 1) {
+                    if (whichAts != 0 && whichAts != 1) {
                         throw runtime_error("Klaida: prasome pasirinkti viena is 4 variantu.");
                     }
                     break;
@@ -86,34 +96,26 @@ int main()
                     cerr << e.what() << endl;
                 }
             }
-            if (ats == 0) {
+            if (whichAts == 0) {
 
                 int b = 1000;
 
                 for (int i = 0; i < 5; i++) {
                     cout << "----------------------------------" << endl;
 
-                    readFile("studentai" + to_string(b) + ".txt", Vec1);
-
-                    Timer t;
-                    for (Stud& Temp : Vec1) {
-                        grouping(smart, dumb, Temp);
-                    }
-                    cout << "Studentu grupavimas uztruko: " << t.elapsed() << " s\n";
-
-                    cout << "    " << endl;
+                    readFile("studentai" + to_string(b) + ".txt", List1);
 
                     cout << "Pasirinkite pagal ka noretumete rusiuoti sugrupuotus studentus:\n1 - varda, 2 - pavarde, 3 - galutini rezultata maz., 4 - galutini rezultata did." << endl;
-                    int ats;
+                   
                     while (true) {
                         try {
-                            if (!(cin >> ats)) {
+                            if (!(cin >> sortAts)) {
                                 cin.clear();
                                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                                 throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
                             }
 
-                            if (ats != 1 && ats != 2 && ats != 3 && ats != 4) {
+                            if (sortAts != 1 && sortAts != 2 && sortAts != 3 && sortAts != 4) {
                                 throw runtime_error("Klaida: prasome pasirinkti viena is 4 variantu.");
                             }
                             break;
@@ -123,8 +125,17 @@ int main()
                         }
                     }
 
-                    sort(smart, dumb, ats);
-                    cout << "   " << endl;
+                    sortByChoice(List1, sortAts);
+
+                    Timer t;
+                    for (Stud& Temp : List1) {
+                        grouping(smart, dumb, Temp);
+                    }
+                    cout << "Studentu grupavimas uztruko: " << t.elapsed() << " s\n";
+
+                    cout << "    " << endl;
+
+                    
 
                     outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
                     outputInFile("Dumb studentai" + to_string(b) + ".txt", dumb);
@@ -137,21 +148,21 @@ int main()
             else {
                 cout << "Pateikite failo varda: " << endl;
                 cin >> textFile;
-                readFile(textFile, Vec1);
+                readFile(textFile, List1);
 
                 cout << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas" 
                 << setw(10) << right << "Galutinis (Vid.)" << "    "
                 << setw(10) << right << "Galutinis (Med.)" << endl;
-                for (Stud& student : Vec1) {
+                for (Stud& student : List1) {
                     finalgrade(student);
                 }
-                outputFile(Vec1);
+                outputFile(List1);
             }
         }
     }
     else if (textAts == 1) {
+
         cout << "Studentu skaicius: " << endl;
-        int n;
 
         while (true) {
             try {
@@ -172,21 +183,21 @@ int main()
             cout << "Studento vardas, pavarde: " << endl;
             ived(Temp);
             finalgrade(Temp);
-            Vec1.push_back(Temp);
+            List1.push_back(Temp);
             val(Temp);
         }
 
         cout << "Ar norite galutini ivertinima skaiciuoti su mediana ar vidurkiu? (0 - vidurkiu, 1 - mediana)"  << endl;
-        int choice;
+       
         while (true) {
             try {
-                if (!(cin >> choice)) {
+                if (!(cin >> finalChoice)) {
                     cin.clear();
                     cin.ignore(numeric_limits<streamsize>::max(), '\n');
                     throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
                 }
 
-                if (choice != 0 && choice != 1) {
+                if (finalChoice != 0 && finalChoice != 1) {
                     throw runtime_error("Klaida: prasome pasirinkti 0 - vidurkiu arba 1 - mediana.");
                 }
 
@@ -197,16 +208,14 @@ int main()
             }
         }
     
-        cout << setw(15) << left << "Studento vardas" << "   " << setw(15) << left << "Pavarde" << setw(3) << right << "Galutinis ivertinimas" << endl;
+        cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde" 
+            << setw(15) << left << "Galutinis bal." << setw(15) << left << "Struct Adresas" << endl;
 
-        for (int i = 0; i < n; i++)
-        {
-            if (choice == 0){
-                outputMean(Vec1.at(i));
-            }
-            else if (choice == 1){
-                outputMedian(Vec1.at(i));
-            }
+        if (finalChoice == 0){
+            outputMean(List1);
+        }
+        else if (finalChoice == 1){
+            outputMedian(List1);
         }
     }
 }
