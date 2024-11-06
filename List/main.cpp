@@ -15,8 +15,9 @@ int main(){
     sortAts - the choice of how the user wants to sort users
     n - number of students
     finalChoice - the choice of how the user wants to present final grade
+    strategy - is a choice for the user of which grouping strategy he wants to use
     */
-    int textAts, genrAts, whichAts, sortAts, n, finalChoice;
+    int textAts, genrAts, whichAts, sortAts, n, finalChoice, strategy;
 
     cout << "Ar norite nuskaityti informacija is tekstinio failo? (0 - taip, 1 - ne)" << endl;
     
@@ -124,21 +125,35 @@ int main(){
                             cerr << e.what() << endl;
                         }
                     }
+                    for (Stud& temp : List1) {
+                        finalgrade(temp);
+                    }
 
                     sortByChoice(List1, sortAts);
 
-                    Timer t;
-                    for (Stud& Temp : List1) {
-                        grouping(smart, dumb, Temp);
+                    cout << "Pasirinkite grupavimo strategija: (Pasirinkimai 1, 2, 3)" << endl;
+                    cin >> strategy;
+                    if (strategy != 1 && strategy != 2 && strategy != 3) {
+                        throw runtime_error("Klaida: prasome pasirinkti viena is 4 variantu.");
                     }
-                    cout << "Studentu grupavimas uztruko: " << t.elapsed() << " s\n";
-
-                    cout << "    " << endl;
-
-                    
-
-                    outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
-                    outputInFile("Dumb studentai" + to_string(b) + ".txt", dumb);
+                    if (strategy == 1) {
+                        grouping1(smart, dumb, List1);
+                        cout << "    " << endl;
+                        outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
+                        outputInFile("Dumb studentai" + to_string(b) + ".txt", dumb);
+                    }
+                    else if (strategy == 2) {
+                        grouping2(smart, List1);
+                        cout << "    " << endl;
+                        outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
+                        outputInFile("Dumb studentai" + to_string(b) + ".txt", List1);
+                    }
+                    else if (strategy == 3) {
+                        grouping3(smart, List1);
+                        cout << "    " << endl;
+                        outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
+                        outputInFile("Dumb studentai" + to_string(b) + ".txt", List1);
+                    }
 
                     b *= 10;
                     system("pause");
