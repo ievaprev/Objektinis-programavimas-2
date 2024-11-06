@@ -6,6 +6,8 @@ Programa, kuri leidžia vartotojui suvesti arba nuskaityti duomenis apie student
 
 **V0.2 atnaujinimas:** Vartotojas nuo šiol gali pasirinkti failu ne tik nuskaityti, bet ir sugeneruoti. Naudotojui pasirinkus generavimo metodą, bus sugeneruojami 5 skirtingi failai: studentai 1000, studentai 10000, studentai 100000, studentai 1000000 studentai 10000000.
 <br/>
+v0.3 atnaujinimas
+v1.0 atnaujinimas
 
 **Failų paaiškinimas:**
 * main.cpp yra pagrindinis failas
@@ -42,6 +44,7 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 * SDD: 1 TB
   
 ### Failas: Studentai 1000
+**Pirma strategija**
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
 | Failo nuskaitymas | 0.0159676167 s | 0.0123800667 s |
@@ -55,6 +58,7 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 ----------------------
 
 ### Failas: Studentai 10000
+**Pirma strategija**
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
 | Failo nuskaitymas | 0.0985081333 s | 0.0950360667 s |
@@ -68,6 +72,7 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 ----------------------
 
 ### Failas: Studentai 100000
+**Pirma strategija**
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
 | Failo nuskaitymas | 0.751953875 s | 0.7402695 s |
@@ -81,6 +86,7 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 ----------------------
 
 ### Failas: Studentai 1000000
+**Pirma strategija**
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
 | Failo nuskaitymas | 8.2884075 s | 8.067803333 s |
@@ -94,6 +100,7 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 ----------------------
 
 ### Failas: Studentai 10000000
+**Pirma strategija**
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
 | Failo nuskaitymas | 85.1526125 s | 82.4037 s |
