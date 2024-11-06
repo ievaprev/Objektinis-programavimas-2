@@ -1,7 +1,6 @@
 #include "Stud.h"
 #include "Timer.h"
 
-
 void ived(Stud &Lok) 
 {
 	cin >> Lok.vardas >> Lok.pavarde;
@@ -153,16 +152,6 @@ double mean(const vector <int>& ND)
 	return vidurkis;
 }
 
-void grouping(list<Stud>& smart, list<Stud>& dumb, Stud& Lok)
-{
-	finalgrade(Lok);
-	if (Lok.vid >= 5.0) {
-		smart.push_back(Lok);
-	}
-	else if(Lok.vid < 5) {
-		dumb.push_back(Lok);
-	}
-}
 bool sortByName(Stud& a, Stud& b) {
 	return a.vardas < b.vardas;
 }
