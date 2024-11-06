@@ -53,6 +53,16 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Studentų išvedimas į smart failą | 0.0030953833 s | 0.0031049833 s |
 | Studentų išvedimas į dumb failą | 0.00191965 s | 0.0015635833 s |
 </br>
+
+**Antra strategija**
+
+| VEIKSMAS | VYKDYMO VIDURKIS(list) |
+| --- | --- |
+| Failo nuskaitymas                   | 0.019020 s|
+| Failo rušiavimas                    | 0.000228 s|
+| Failo grupavimas                    | 0.000085 s|
+| Studentų išvedimas į smart failą    | 0.003435 s|
+| Studentų išvedimas į dumb failą     | 0.016829 s|
 <img src="https://github.com/user-attachments/assets/eccc11f9-8d10-4f0f-ba1e-778801e60b96" alt="Description" width="500"/>
 
 ----------------------
@@ -67,6 +77,16 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Studentų išvedimas į smart failą | 0.0130139 s | 0.0126294 s |
 | Studentų išvedimas į dumb failą | 0.0099617833 s | 0.0095311167 s |
 </br>
+
+**Antra strategija**
+
+| VEIKSMAS | VYKDYMO VIDURKIS(list) |
+| --- | --- |
+| Failo nuskaitymas                   | 0.085794 s|
+| Failo rušiavimas                    | 0.002108 s|
+| Failo grupavimas                    | 0.001052 s|
+| Studentų išvedimas į smart failą    | 0.011443 s|
+| Studentų išvedimas į dumb failą     | 0.009215 s|
 <img src="https://github.com/user-attachments/assets/63142280-c428-4fac-8e0e-f90954c2518b" alt="Description" width="500"/>
 
 ----------------------
@@ -81,6 +101,16 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Studentų išvedimas į smart failą | 0.1135195 s | 0.0991398333 s |
 | Studentų išvedimas į dumb failą | 0.0726314667 s | 0.0720664 s |
 </br>
+
+**Antra strategija** </br>
+
+| VEIKSMAS | VYKDYMO VIDURKIS(list) |
+| --- | --- |
+| Failo nuskaitymas                   | 0.750852 s|
+| Failo rušiavimas                    | 0.015056 s|
+| Failo grupavimas                    | 0.016468 s|
+| Studentų išvedimas į smart failą    | 0.083223 s|
+| Studentų išvedimas į dumb failą     | 0.058222 s|
 <img src="https://github.com/user-attachments/assets/0f1a3a84-f97b-48ce-8d63-2e0b298907b8" alt="Description" width="500"/>
 
 ----------------------
@@ -95,6 +125,16 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Studentų išvedimas į smart failą | 1.0000588167 s | 0.822413 s |
 | Studentų išvedimas į dumb failą | 0.6644465 s | 0.5990218333 s |
 </br>
+
+**Antra strategija**
+| VEIKSMAS | VYKDYMO VIDURKIS(list) |
+| --- | --- |
+| Failo nuskaitymas                   | 6.669537 s|
+| Failo rušiavimas                    | 0.121612 s|
+| Failo grupavimas                    | 0.229607 s|
+| Studentų išvedimas į smart failą    | 0.616712 s|
+| Studentų išvedimas į dumb failą     | 0.458501 s|
+
 <img src="https://github.com/user-attachments/assets/8262d682-3c40-490e-a7ef-ca1db22052e6" alt="Description" width="500"/>
 
 ----------------------
@@ -109,6 +149,16 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Studentų išvedimas į smart failą | 10.1445716667 s | 9.6545516667 s |
 | Studentų išvedimas į dumb failą | 7.6079633333 s | 7.146921 s |
 </br>
+
+**Antra strategija**
+
+| VEIKSMAS | VYKDYMO VIDURKIS(list) |
+| --- | --- |
+| Failo nuskaitymas                   | 64.72142 s|
+| Failo rušiavimas                    | 1.25798 s|
+| Failo grupavimas                    | 3.13935 s|
+| Studentų išvedimas į smart failą    | 6.67649 s|
+| Studentų išvedimas į dumb failą     | 4.57997 s|
 <img src="https://github.com/user-attachments/assets/a41b041b-e72d-440e-ae99-5e3d2833e364" alt="Description" width="500"/>
 
 ## Testavimo išvados
