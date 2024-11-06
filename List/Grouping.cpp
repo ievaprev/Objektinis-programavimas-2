@@ -34,7 +34,7 @@ void grouping3(list<Stud>& smart, list<Stud>& list)
 {
 	Timer t;
 
-	auto it = std::partition(list.begin(), list.end(), [](const Stud& s) { return s.vid > 5; });
+	auto it = partition(list.begin(), list.end(), [](const Stud& s) { return s.vid > 5; });
 	smart.splice(smart.end(), list, list.begin(), it);
 
 	cout << "Studentu grupavimas uztruko: " << t.elapsed() << " s\n";
