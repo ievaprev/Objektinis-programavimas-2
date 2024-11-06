@@ -1,3 +1,0 @@
-Pavarde  Vardas ND1 ND2 ND3 ND4 Egzaminas
-prev     iev    4   3   9   5   6
-boro     ema    5   1   7   10   10
