@@ -66,11 +66,11 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 **Trečia strategija**
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
-| Failo nuskaitymas                   | 0.020861 s|
-| Failo rušiavimas                    | 0.0000924 s|
-| Failo grupavimas                    | 0.000096 s|
-| Studentų išvedimas į smart failą    | 0.002818 s|
-| Studentų išvedimas į dumb failą     | 0.0013931 s|
+| Failo nuskaitymas                  | 0.0102307 s | 0.020861 s|
+| Failo rušiavimas                   | 0.0002818 s | 0.0000924 s|
+| Failo grupavimas                   | 0.0000639 s | 0.000096 s|
+| Studentų išvedimas į smart failą   | 0.0025763 s | 0.002818 s|
+| Studentų išvedimas į dumb failą    | 0.0014608 s | 0.0013931 s|
 <img src="https://github.com/user-attachments/assets/eccc11f9-8d10-4f0f-ba1e-778801e60b96" alt="Description" width="500"/>
 
 ----------------------
@@ -98,11 +98,11 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 **Trečia steategija**
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
-| Failo nuskaitymas                   | 0.092395 s|
-| Failo rušiavimas                    | 0.0012073 s|
-| Failo grupavimas                    | 0.0007259 s|
-| Studentų išvedimas į smart failą    | 0.0107712 s|
-| Studentų išvedimas į dumb failą     | 0.0078009 s|
+| Failo nuskaitymas                  | 0.0905467 s | 0.092395 s|
+| Failo rušiavimas                   | 0.0042513 s | 0.0012073 s|
+| Failo grupavimas                   | 0.0006844 s | 0.0007259 s|
+| Studentų išvedimas į smart failą   | 0.0109514 s | 0.0107712 s|
+| Studentų išvedimas į dumb failą    | 0.0070881 s | 0.0078009 s|
 <img src="https://github.com/user-attachments/assets/63142280-c428-4fac-8e0e-f90954c2518b" alt="Description" width="500"/>
 
 ----------------------
@@ -131,11 +131,11 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
-| Failo nuskaitymas                   | 0.6484366 s|
-| Failo rušiavimas                    | 0.0182077 s|
-| Failo grupavimas                    | 0.00993212 s|
-| Studentų išvedimas į smart failą    | 0.08293438 s|
-| Studentų išvedimas į dumb failą     | 0.05512132 s|
+| Failo nuskaitymas                  | 0.7453039 s | 0.6484366 s|
+| Failo rušiavimas                   | 0.0495826 s | 0.0182077 s|
+| Failo grupavimas                   | 0.0072107 s | 0.00993212 s|
+| Studentų išvedimas į smart failą   | 0.0806573 s | 0.08293438 s|
+| Studentų išvedimas į dumb failą    | 0.0531508 s | 0.05512132 s|
 <img src="https://github.com/user-attachments/assets/0f1a3a84-f97b-48ce-8d63-2e0b298907b8" alt="Description" width="500"/>
 
 ----------------------
@@ -162,11 +162,11 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 **Trečia steategija**
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
-| Failo nuskaitymas                   | 6.109984 s|
-| Failo rušiavimas                    | 0.2250646 s|
-| Failo grupavimas                    | 0.08983824 s|
-| Studentų išvedimas į smart failą    | 0.6137734 s|
-| Studentų išvedimas į dumb failą     | 0.422014 s|
+| Failo nuskaitymas                  | 7.2731120 s | 6.109984 s|
+| Failo rušiavimas                   | 0.5361923 s | 0.2250646 s|
+| Failo grupavimas                   | 0.0622364 s | 0.08983824 s|
+| Studentų išvedimas į smart failą   | 0.6443484 s | 0.6137734 s|
+| Studentų išvedimas į dumb failą    | 0.4263662 s | 0.422014 s|
 <img src="https://github.com/user-attachments/assets/8262d682-3c40-490e-a7ef-ca1db22052e6" alt="Description" width="500"/>
 
 ----------------------
@@ -194,11 +194,11 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 **Trečia steategija**
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
 | --- | --- | --- |
-| Failo nuskaitymas                   | 57.26326 s|
-| Failo rušiavimas                    | 2.928294 s|
-| Failo grupavimas                    | 0.8334702 s|
-| Studentų išvedimas į smart failą    | 5.74896 s|
-| Studentų išvedimas į dumb failą     | 3.777118 s|
+| Failo nuskaitymas                  | 72.2938054 s | 57.26326 s|
+| Failo rušiavimas                   | 6.2909252 s | 2.928294 s|
+| Failo grupavimas                   | 0.5787044 s | 0.8334702 s|
+| Studentų išvedimas į smart failą   | 6.5107646 s | 5.74896 s|
+| Studentų išvedimas į dumb failą    | 4.6918214  s| 3.777118 s|
 <img src="https://github.com/user-attachments/assets/a41b041b-e72d-440e-ae99-5e3d2833e364" alt="Description" width="500"/>
 
 ## Testavimo išvados
