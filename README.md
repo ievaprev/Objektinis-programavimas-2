@@ -55,17 +55,17 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 
 **Antra strategija**
 
-| VEIKSMAS | VYKDYMO VIDURKIS(list) |
-| --- | --- |
-| Failo nuskaitymas                   | 0.019020 s|
-| Failo rušiavimas                    | 0.000228 s|
-| Failo grupavimas                    | 0.000085 s|
-| Studentų išvedimas į smart failą    | 0.003435 s|
-| Studentų išvedimas į dumb failą     | 0.016829 s|
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas                  | 0.01044758 s | 0.019020 s|
+| Failo rušiavimas                   | 0.0003314 s | 0.000228 s|
+| Failo grupavimas                   | 0.00020226 s | 0.000085 s|
+| Studentų išvedimas į smart failą   | 0.00250062 s | 0.003435 s|
+| Studentų išvedimas į dumb failą    | 0.00140596 s | 0.016829 s|
 
 **Trečia strategija**
-| VEIKSMAS                         | VYKDYMO VIDURKIS(list) |
-|-------------------------------------|------------------------|
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
 | Failo nuskaitymas                   | 0.020861 s|
 | Failo rušiavimas                    | 0.0000924 s|
 | Failo grupavimas                    | 0.000096 s|
@@ -87,17 +87,17 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 
 **Antra strategija**
 
-| VEIKSMAS | VYKDYMO VIDURKIS(list) |
-| --- | --- |
-| Failo nuskaitymas                   | 0.085794 s|
-| Failo rušiavimas                    | 0.002108 s|
-| Failo grupavimas                    | 0.001052 s|
-| Studentų išvedimas į smart failą    | 0.011443 s|
-| Studentų išvedimas į dumb failą     | 0.009215 s|
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas                  | 0.0816417 s | 0.085794 s|
+| Failo rušiavimas                   | 0.00451634 s| 0.002108 s|
+| Failo grupavimas                   | 0.00206306 s| 0.001052 s|
+| Studentų išvedimas į smart failą   | 0.0117262 s | 0.011443 s|
+| Studentų išvedimas į dumb failą    | 0.00751514 s| 0.009215 s|
 
 **Trečia steategija**
-| Veiksmas                            | VYKDYMO VIDURKIS(list) |
-|-------------------------------------|------------------------|
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
 | Failo nuskaitymas                   | 0.092395 s|
 | Failo rušiavimas                    | 0.0012073 s|
 | Failo grupavimas                    | 0.0007259 s|
@@ -119,18 +119,18 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 
 **Antra strategija** </br>
 
-| VEIKSMAS | VYKDYMO VIDURKIS(list) |
-| --- | --- |
-| Failo nuskaitymas                   | 0.750852 s|
-| Failo rušiavimas                    | 0.015056 s|
-| Failo grupavimas                    | 0.016468 s|
-| Studentų išvedimas į smart failą    | 0.083223 s|
-| Studentų išvedimas į dumb failą     | 0.058222 s|
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas                  | 0.6415938 s | 0.750852 s|
+| Failo rušiavimas                   | 0.04712624 s | 0.015056 s|
+| Failo grupavimas                   | 0.01539674 s | 0.016468 s|
+| Studentų išvedimas į smart failą   | 0.07577556 s| 0.083223 s|
+| Studentų išvedimas į dumb failą    | 0.05242182 s | 0.058222 s|
 
 **Trečia steategija**
 
-| Veiksmas                            | VYKDYMO VIDURKIS(list) |
-|-------------------------------------|------------------------|
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
 | Failo nuskaitymas                   | 0.6484366 s|
 | Failo rušiavimas                    | 0.0182077 s|
 | Failo grupavimas                    | 0.00993212 s|
@@ -151,17 +151,17 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 | Studentų išvedimas į dumb failą | 0.6644465 s | 0.5990218333 s |
 
 **Antra strategija**
-| VEIKSMAS | VYKDYMO VIDURKIS(list) |
-| --- | --- |
-| Failo nuskaitymas                   | 6.669537 s|
-| Failo rušiavimas                    | 0.121612 s|
-| Failo grupavimas                    | 0.229607 s|
-| Studentų išvedimas į smart failą    | 0.616712 s|
-| Studentų išvedimas į dumb failą     | 0.458501 s|
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas                 | 6.098156 s  | 6.669537 s|
+| Failo rušiavimas                  | 0.4605068  s | 0.121612 s|
+| Failo grupavimas                  | 0.09134838 s  | 0.229607 s|
+| Studentų išvedimas į smart failą  | 0.5152744  s | 0.616712 s|
+| Studentų išvedimas į dumb failą    | 0.3749948  s | 0.458501 s|
 
 **Trečia steategija**
-| Veiksmas                            | VYKDYMO VIDURKIS(list) |
-|-------------------------------------|------------------------|
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
 | Failo nuskaitymas                   | 6.109984 s|
 | Failo rušiavimas                    | 0.2250646 s|
 | Failo grupavimas                    | 0.08983824 s|
@@ -183,17 +183,17 @@ Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atli
 
 **Antra strategija**
 
-| VEIKSMAS | VYKDYMO VIDURKIS(list) |
-| --- | --- |
-| Failo nuskaitymas                   | 64.72142 s|
-| Failo rušiavimas                    | 1.25798 s|
-| Failo grupavimas                    | 3.13935 s|
-| Studentų išvedimas į smart failą    | 6.67649 s|
-| Studentų išvedimas į dumb failą     | 4.57997 s|
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas                  | 62.77496 s | 64.72142 s|
+| Failo rušiavimas                   | 5.333358 s | 3.13935 s|
+| Failo grupavimas                    | 0.9854816 s| 1.25798 s|
+| Studentų išvedimas į smart failą   | 5.417268 s | 6.67649 s|
+| Studentų išvedimas į dumb failą    | 3.800548 s | 4.57997 s|
 
 **Trečia steategija**
-| Veiksmas                            | VYKDYMO VIDURKIS(list) |
-|-------------------------------------|------------------------|
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
 | Failo nuskaitymas                   | 57.26326 s|
 | Failo rušiavimas                    | 2.928294 s|
 | Failo grupavimas                    | 0.8334702 s|
