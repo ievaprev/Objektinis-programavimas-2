@@ -1,18 +1,22 @@
 # Objektinis-programavimas
 ## Programos aprašymas <br/>
-Programa, kuri leidžia vartotojui suvesti arba nuskaityti duomenis apie studenta(vardą, pavardę, namų darbų rezultatus, egzamino rezultatus). Apskaičiuoja studentų galutinius rezultatus paga formulę: Galutinis = 0.4 x namų darbų rezultatai + 0.6 x egzamino įvertinimas. <br />
+Programa, kuri leidžia vartotojui suvesti arba nuskaityti duomenis apie studenta(vardą, pavardę, namų darbų rezultatus, egzamino rezultatus). Apskaičiuoja studentų galutinius rezultatus paga formulę: Galutinis = 0.4 x namų darbų rezultatai + 0.6 x egzamino įvertinimas. Išspausdina rezultatus su studento informacija ir galutiniu balu į naują failą arba į termianlą. <br />
 *Namų darbų rezultatai - vartotojui leidžiama pasirinkti ar namų darbų rezultatus skaičiuoti su mediana ar gauti jų vidurkį.*<br/>
 <br/>
 
 **V0.2 atnaujinimas:** Vartotojas nuo šiol gali pasirinkti failu ne tik nuskaityti, bet ir sugeneruoti. Naudotojui pasirinkus generavimo metodą, bus sugeneruojami 5 skirtingi failai: studentai 1000, studentai 10000, studentai 100000, studentai 1000000 studentai 10000000.
 <br/>
-v0.3 atnaujinimas
-v1.0 atnaujinimas
+**v0.3 atnaujinimas:** Norint atlikti testavimus ir palyginti dviejų skirtingų rūšių konteinerius, programa buvo pritaikyta ne tik vector tipo konteineriams, bet ir list tipo konteineriams. <br/>
+**v1.0 atnaujinimas:** Vartotojui suteikta galimybė pasirinkti, kokią strategiją jis/ji nori naudoti atliekant studentų grupavimą. 
+* 1 strategija - skaidymas į du naujus to paties tipo konteinerius: "dumb" ir "smart".
+* 2 strategija - skaidymas (rūšiavimas) panaudojant tik vieną naują konteinerį: "smart".
+* 3 startefija - 2 strategijos patobulinimas naudojant funkcija partition.
 
 **Failų paaiškinimas:**
 * main.cpp yra pagrindinis failas
 * Stud.cpp faile surašytos visi programoje naudojami metodai
 * Files.cpp faile surašyti metodai naudojami failų generavimui ir nuskaitymui
+* Grupavimas.cpp faile surašytos grupavimo metodo 3 strategijos
 * MyLib.h faile aprašytos visos pogramoje naudojamos bibliotekos
 * Stud.h faile aprašyta Stud struktūra, kuri aprašo studentą ir metodų deklaracijos
 * Timer.h faile aprašytas laiko skaičiavimo klasė.
@@ -20,13 +24,14 @@ v1.0 atnaujinimas
 
 **Metodai:**
 * Vartotojas turi pasirinkimą ar nori studento informacija nuskaityti nuo tekstinio failo ar įrašyti rankiniu būdu
+* Vartotojui pasirinkus nuskaityti studento informaciją nuo tekstinio failo, atsiranda galimybė, tekstinius failus ir sugeneruoti
 * Įrašinėjant rankiniu būdu, vartotojas turi galimybe sugeneruoti atsitiktinius namų darbų ir egzamino rezultatus
 * Vartotojas turi galimyę galutinį rezultatą išspausdinti arba skaičiuojant su namų darbų mediana, arba su namų darbų vidurkiu. 
 
-**Nauji metodai:**
+**Metodai su failu generavimu:**
 * Sugeneruojami 5 nauji failai
 * Nauji 5 failai yra nuskaitomi ir sugrupuojami pagal galutinį pažymį. Jeigu galutinis pažymys yra nemažesnis už 5, tada studentas yra priskiriamas prie smart studentu grupes, kitu atveju studentas priskiriamas prie dumb studentu grupes
-* Naudotojui leidžiama pasirinkti pagal kurį aspektą išrušiuoti studentus juos įrašinėjant į rezultatų failus.
+* Naudotojui leidžiama pasirinkti pagal kurį aspektą išrušiuoti studentus juos įrašinėjant į rezultatų failus, taip pat pagal kurią strategiją studentus grupuoti.
 <a/>
   
   
@@ -36,7 +41,7 @@ v1.0 atnaujinimas
 * Nuskaitant failą yra tikrinama ar failas atsidaro, ar nuskaitytoje eilutėje yra namų darbų įrašai ir ar įrašyti namų darbų duomenys atitinka nustatytus standartus(sveikieji skaičiai nuo 1 iki 10 ir ar nėra įrašyta raidė). Pasitaikius išimčiai išmetama atitinkama klaida.
 
 ## Programos testavimas <br/>
-Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **8** kartus ir iš gautų programos veikimo laikų buvo išvestas vidurkis. Žemiau pateikta kiekvieno failo testavimo rezultatai.
+Buvo atliekamas testavimas naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **6** kartus ir iš gautų programos veikimo laikų buvo išvestas vidurkis. Buvo naudojami dviejų tipų konteineriai: std::vector ir std::list. Žemiau pateikta kiekvieno failo testavimo rezultatai naudojant skirtingas grupavimo strategijas.
 
 **Kompiuterio su kuriuo buvo atliekami testai specifikacijos:**
 * CPU: Intel(R) Core(TM) Ultra 7 155H **3.80 GHz**
