@@ -197,7 +197,11 @@ Buvo testuojama programa naudojant dvi skirtingas struktūras: ```std::vector```
 * List yra labiau tinkamas naudoti su dideliais duomenų kiekiais, priešingai negu vector, kuris geriau veikia mažesnio duomenų kiekio failuose. 
 
 # v0.2
-**V0.2 atnaujinimas:** Vartotojas nuo šiol gali pasirinkti failus ne tik nuskaityti, bet ir sugeneruoti. Naudotojui pasirinkus generavimo metodą, bus sugeneruojami 5 skirtingi failai: studentai 1000, studentai 10000, studentai 100000, studentai 1000000 studentai 10000000. Taip pat buvo atliekami testavimai su vektoriu sturktūromis. 
+**V0.2 atnaujinimas:** 
+* Vartotojas nuo šiol gali pasirinkti failus ne tik nuskaityti, bet ir sugeneruoti. Naudotojui pasirinkus generavimo metodą, bus sugeneruojami 5 skirtingi failai: studentai 1000, studentai 10000, studentai 100000, studentai 1000000 studentai 10000000
+* Studentai pagal galutinį vidurkį buvo sugrupuoti į protingus (galutinis įvertinimas > 5) ir ne tiek protingus studentus (galutinis įvertinimas < 5). Dvi skirtingos grupės yra išvedamos į skirtinguus failus
+* Vartotojui suteikiama galimybė pasirinkti kaip rušiuoti studentų failus
+* Buvo atliekami testavimai su vektoriu sturktūromis. 
 <br/>
 
 
