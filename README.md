@@ -21,18 +21,40 @@ Vartotojai gali pasirinkti, ar namų darbų rezultatus skaičiuoti naudojant med
 * Timer.h – faile aprašyta klasė, skirta laiko matavimui programos vykdymo metu.
   
 **Metodai:**
-* Vartotojas turi pasirinkimą ar nori studento informacija nuskaityti nuo tekstinio failo ar įrašyti rankiniu būdu
-* Vartotojui pasirinkus nuskaityti studento informaciją nuo tekstinio failo, atsiranda galimybė, tekstinius failus ir sugeneruoti
-* Įrašinėjant rankiniu būdu, vartotojas turi galimybe sugeneruoti atsitiktinius namų darbų ir egzamino rezultatus
-* Vartotojas turi galimyę galutinį rezultatą išspausdinti arba skaičiuojant su namų darbų mediana, arba su namų darbų vidurkiu. 
+* Vartotojas gali pasirinkti, ar studentų informaciją nuskaityti iš tekstinio failo, ar įvesti rankiniu būdu.
+* Jei vartotojas pasirenka nuskaityti informaciją iš tekstinio failo, suteikiama galimybė sugeneruoti naujus tekstinius failus.
+* Įvedant informaciją rankiniu būdu, vartotojas gali sugeneruoti atsitiktinius namų darbų ir egzamino rezultatus.
+* Vartotojas gali pasirinkti, kaip skaičiuoti galutinį rezultatą – naudojant namų darbų medianą arba vidurkį.
 
-**Metodai su failu generavimu:**
-* Sugeneruojami 5 nauji failai
-* Nauji 5 failai yra nuskaitomi ir sugrupuojami pagal galutinį pažymį. Jeigu galutinis pažymys yra nemažesnis už 5, tada studentas yra priskiriamas prie smart studentu grupes, kitu atveju studentas priskiriamas prie dumb studentu grupes
-* Naudotojui leidžiama pasirinkti pagal kurį aspektą išrušiuoti studentus juos įrašinėjant į rezultatų failus, taip pat pagal kurią strategiją studentus grupuoti.
+**Metodai su failų generavimu:**
+* Sugeneruojami 5 nauji tekstiniai failai.
+* Nauji failai nuskaitomi ir studentai grupuojami pagal galutinį pažymį: jei galutinis pažymys yra nemažesnis už 5, studentas priskiriamas „smart“ grupei, kitaip – „dumb“ grupei.
+* Naudotojui leidžiama pasirinkti, pagal kokius kriterijus išrūšiuoti studentus, įrašant juos į rezultatų failus, taip pat pasirinkti, pagal kurią strategiją juos grupuoti.
 <a/>
 
-## Programos įdiegimas
+## Programos įdiegimo instrukcija
+
+Parsisiųskite projektą kaip ZIP failą.
+Išskleiskite projektą:
+   ```
+   unzip projekto-pav.ZIP
+   ```
+   
+Nukopijuokite projekto direktoriją, sukuriame buid direktoriją ir į ją persikeliame:
+   ```
+   cd /direktorija/i/projekta
+   mkdir build
+   cd build
+   ```
+Paleidžiame CMake, kad sugeneruotų reikalingus failus:
+   ```
+   cmake ..
+   ```
+Sukompiliuojame kodą, sukuriame .exe failą:
+   
+   ```
+   cmake --build
+   ```
 
 ## Testavimas
 V0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **6** kartus, o gauti programos vykdymo laikai buvo panaudoti vidurkiui apskaičiuoti. Buvo naudojami dviejų tipų konteineriai: ```std::vector``` ir ```std::list```. Žemiau pateikiamos v0.3 ir v1.0 dalių testavimo rezultatų suvestinės.
