@@ -62,7 +62,7 @@ V0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 failus. T
 * 1 strategija - skaidymas į du naujus to paties tipo konteinerius: "dumb" ir "smart".
 * 2 strategija - skaidymas (rūšiavimas) panaudojant tik vieną naują konteinerį: "smart".
 * 3 startefija - 2 strategijos patobulinimas naudojant funkcija partition.
-* 
+  
 ### Failas: Studentai 1000
 | VEIKSMAS | VYKDYMO VID.(vector-2str) | VYKDYMO VID.(list-2str) | VYKDYMO VID.(vector-3str) | VYKDYMO VID.(list-3str) |
 | --- | --- | --- |--- | --- |
@@ -119,12 +119,16 @@ V0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 failus. T
 
 ----------------------
 ## Testavimo išvados:
+Buvo testuojama programa naudojant dvi skirtingas struktūras: ```std::vector``` ir ```std::list```. Programos veikimo laikai buvo lyginami. </br>
+**Galima padaryti išvadas:**
 * 3 srategija(tiek vector, tiek list) dažniausiai yra spartesnė nei 2 strategija, ypač rūšiavimo ir grupavimo operacijose. Tai rodo, kad 3 strategija efektyviau tvarko duomenis, greičiau atlieka šias operacijas.
 * Didėjant duomenų kiekiui, tiek vector, tiek list struktūrose išlieka panaši vykdymo laiko tendencija – 3 strategija yra greitesnė nei 2 strategija. Tai rodo, kad pasirinkus tinkamą formatą, galima sumažinti vykdymo laiką nepriklausomai nuo struktūros tipo.
 * List struktūros šiek tiek praranda našumą esant labai dideliems duomenų rinkiniams. Tai leidžia manyti, kad vector struktūros yra labiau skalabilios su didėjančiu duomenų kiekiu.
   
 # v0.3
-**v0.3 atnaujinimas:** Norint atlikti testavimus ir palyginti dviejų skirtingų rūšių konteinerius, programa buvo pritaikyta ne tik vector tipo konteineriams, bet ir list tipo konteineriams. <br/>
+**V0.3 atnaujinimas:** 
+* Norint atlikti testavimus ir palyginti dviejų skirtingų rūšių konteinerius, programa buvo pritaikyta ne tik vector tipo konteineriams, bet ir list tipo konteineriams.
+* Surenkant studentu duomenis ranka, programa apskaičiuoja ne tik galutinį rezultatą, tačiau ir struktūros adresą kompiuterio atmintyje. <br/>
 ### Failas: Studentai 1000
 **Pirma strategija**
 | VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
@@ -185,15 +189,73 @@ V0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 failus. T
 <img src="https://github.com/user-attachments/assets/a41b041b-e72d-440e-ae99-5e3d2833e364" alt="Description" width="500"/>
 ----------------------
 
-# v0.2
-**V0.2 atnaujinimas:** Vartotojas nuo šiol gali pasirinkti failu ne tik nuskaityti, bet ir sugeneruoti. Naudotojui pasirinkus generavimo metodą, bus sugeneruojami 5 skirtingi failai: studentai 1000, studentai 10000, studentai 100000, studentai 1000000 studentai 10000000.
-<br/>
-
-
-
-
 ## Testavimo išvados
-Buvo testuojama programa naudojant dvi skirtingas struktūras: std::vector ir std::list. Programos veikimo laikai buvo lyginami. </br>
+Buvo testuojama programa naudojant dvi skirtingas struktūras: ```std::vector``` ir ```std::list```. Programos veikimo laikai buvo lyginami. </br>
 **Galima padaryti išvadas:**
 * Lyginant vector ir list, programa sparčiau veikia, tačiau pokyčiai yra neženklūs. Atsižvelgiant į skaičius, didesnius pokyčius galime pastebėti tik didesniuose duomenų failuose.
 * List yra labiau tinkamas naudoti su dideliais duomenų kiekiais, priešingai negu vector, kuris geriau veikia mažesnio duomenų kiekio failuose. 
+
+# v0.2
+**V0.2 atnaujinimas:** Vartotojas nuo šiol gali pasirinkti failus ne tik nuskaityti, bet ir sugeneruoti. Naudotojui pasirinkus generavimo metodą, bus sugeneruojami 5 skirtingi failai: studentai 1000, studentai 10000, studentai 100000, studentai 1000000 studentai 10000000.
+<br/>
+
+
+### Failas: Studentai 1000
+
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | 
+| --- | --- |
+| Failo nuskaitymas | 0.0159676167 s |
+| Failo grupavimas  | 0.0019471667 s | 
+| Failo rušiavimas  | 0.0002987667 s | 
+| Studentų išvedimas į smart failą | 0.0030953833 s |
+| Studentų išvedimas į dumb failą | 0.00191965 s | 
+
+----------------------
+
+### Failas: Studentai 10000
+
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas | 0.0985081333 s | 
+| Failo grupavimas  | 0.0076673167 s | 
+| Failo rušiavimas  | 0.0052359 s | 
+| Studentų išvedimas į smart failą | 0.0130139 s | 
+| Studentų išvedimas į dumb failą | 0.0099617833 s | 
+
+----------------------
+
+### Failas: Studentai 100000
+
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas | 0.751953875 s | 
+| Failo grupavimas  | 0.0603202 s | 
+| Failo rušiavimas  | 0.0599166875 s | 
+| Studentų išvedimas į smart failą | 0.1135195 s | 
+| Studentų išvedimas į dumb failą | 0.0726314667 s | 
+
+----------------------
+
+### Failas: Studentai 1000000
+
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
+| --- | --- | --- |
+| Failo nuskaitymas | 8.2884075 s |
+| Failo grupavimas  | 0.851942625 s |
+| Failo rušiavimas  | 0.71661653 s | 
+| Studentų išvedimas į smart failą | 1.0000588167 s | 
+| Studentų išvedimas į dumb failą | 0.6644465 s |
+
+----------------------
+
+### Failas: Studentai 10000000
+
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | 
+| --- | --- | 
+| Failo nuskaitymas | 85.1526125 s |
+| Failo grupavimas  | 5.68810375 s |
+| Failo rušiavimas  | 6.61167625 s | 
+| Studentų išvedimas į smart failą | 10.1445716667 s | 
+| Studentų išvedimas į dumb failą | 7.6079633333 s |
+
+
