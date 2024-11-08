@@ -33,16 +33,9 @@ Vartotojai gali pasirinkti, ar namų darbų rezultatus skaičiuoti naudojant med
 <a/>
 
 ## Programos įdiegimo instrukcija
-
-Parsisiųskite projektą kaip ZIP failą.
-Išskleiskite projektą:
-   ```
-   unzip projekto-pav.ZIP
-   ```
-   
 Nukopijuokite projekto direktoriją, sukuriame buid direktoriją ir į ją persikeliame:
    ```
-   cd /direktorija/i/projekta
+   cd direktorija
    mkdir build
    cd build
    ```
@@ -55,7 +48,7 @@ Sukompiliuojame kodą, sukuriame .exe failą:
    ```
    cmake --build
    ```
-
+----------------------
 ## Testavimas
 V0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **6** kartus, o gauti programos vykdymo laikai buvo panaudoti vidurkiui apskaičiuoti. Buvo naudojami dviejų tipų konteineriai: ```std::vector``` ir ```std::list```. Žemiau pateikiamos v0.3 ir v1.0 dalių testavimo rezultatų suvestinės.
 
