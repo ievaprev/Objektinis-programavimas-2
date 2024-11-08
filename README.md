@@ -50,7 +50,7 @@ Sukompiliuojame kodą, sukuriame .exe failą:
    ```
 ----------------------
 ## Testavimas
-V0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **6** kartus, o gauti programos vykdymo laikai buvo panaudoti vidurkiui apskaičiuoti. Buvo naudojami dviejų tipų konteineriai: ```std::vector``` ir ```std::list```. Žemiau pateikiamos v0.3 ir v1.0 dalių testavimo rezultatų suvestinės.
+V0.2, v0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **6** kartus, o gauti programos vykdymo laikai buvo panaudoti vidurkiui apskaičiuoti. Buvo naudojami dviejų tipų konteineriai: ```std::vector``` ir ```std::list```. Žemiau pateikiamos v0.2, v0.3 ir v1.0 dalių testavimo rezultatų suvestinės.
 
 **Kompiuterio su kuriuo buvo atliekami testai specifikacijos:**
 * CPU: Intel(R) Core(TM) Ultra 7 155H **3.80 GHz**
@@ -118,6 +118,7 @@ V0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 failus. T
 | Studentų išvedimas į dumb failą    | 3.800548 s | 4.57997 s| 4.6918214  s| 3.777118 s|
 
 ----------------------
+
 ## Testavimo išvados:
 Buvo testuojama programa naudojant dvi skirtingas struktūras: ```std::vector``` ir ```std::list```. Programos veikimo laikai buvo lyginami. </br>
 **Galima padaryti išvadas:**
@@ -196,7 +197,7 @@ Buvo testuojama programa naudojant dvi skirtingas struktūras: ```std::vector```
 * List yra labiau tinkamas naudoti su dideliais duomenų kiekiais, priešingai negu vector, kuris geriau veikia mažesnio duomenų kiekio failuose. 
 
 # v0.2
-**V0.2 atnaujinimas:** Vartotojas nuo šiol gali pasirinkti failus ne tik nuskaityti, bet ir sugeneruoti. Naudotojui pasirinkus generavimo metodą, bus sugeneruojami 5 skirtingi failai: studentai 1000, studentai 10000, studentai 100000, studentai 1000000 studentai 10000000.
+**V0.2 atnaujinimas:** Vartotojas nuo šiol gali pasirinkti failus ne tik nuskaityti, bet ir sugeneruoti. Naudotojui pasirinkus generavimo metodą, bus sugeneruojami 5 skirtingi failai: studentai 1000, studentai 10000, studentai 100000, studentai 1000000 studentai 10000000. Taip pat buvo atliekami testavimai su vektoriu sturktūromis. 
 <br/>
 
 
