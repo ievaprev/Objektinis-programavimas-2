@@ -118,7 +118,11 @@ V0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 failus. T
 | Studentų išvedimas į dumb failą    | 3.800548 s | 4.57997 s| 4.6918214  s| 3.777118 s|
 
 ----------------------
-
+## Testavimo išvados:
+* 3 srategija(tiek vector, tiek list) dažniausiai yra spartesnė nei 2 strategija, ypač rūšiavimo ir grupavimo operacijose. Tai rodo, kad 3 strategija efektyviau tvarko duomenis, greičiau atlieka šias operacijas.
+* Didėjant duomenų kiekiui, tiek vector, tiek list struktūrose išlieka panaši vykdymo laiko tendencija – 3 strategija yra greitesnė nei 2 strategija. Tai rodo, kad pasirinkus tinkamą formatą, galima sumažinti vykdymo laiką nepriklausomai nuo struktūros tipo.
+* List struktūros šiek tiek praranda našumą esant labai dideliems duomenų rinkiniams. Tai leidžia manyti, kad vector struktūros yra labiau skalabilios su didėjančiu duomenų kiekiu.
+  
 # v0.3
 **v0.3 atnaujinimas:** Norint atlikti testavimus ir palyginti dviejų skirtingų rūšių konteinerius, programa buvo pritaikyta ne tik vector tipo konteineriams, bet ir list tipo konteineriams. <br/>
 ### Failas: Studentai 1000
