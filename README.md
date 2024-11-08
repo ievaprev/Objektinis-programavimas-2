@@ -35,7 +35,7 @@ Vartotojai gali pasirinkti, ar namų darbų rezultatus skaičiuoti naudojant med
 ## Programos įdiegimo instrukcija
 Nukopijuokite projekto direktoriją, sukuriame buid direktoriją ir į ją persikeliame:
    ```
-   cd direktorija
+   cd projekto_direktorija
    mkdir build
    cd build
    ```
@@ -46,7 +46,7 @@ Paleidžiame CMake, kad sugeneruotų reikalingus failus:
 Sukompiliuojame kodą, sukuriame .exe failą:
    
    ```
-   cmake --build
+   cmake --build . --config Release
    ```
 ----------------------
 ## Testavimas
