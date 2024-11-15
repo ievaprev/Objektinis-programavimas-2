@@ -95,14 +95,14 @@ void outputMean(list<Stud>& stud)
 {
 	for(const Stud& student : stud)
 		cout << setw(18) << left << student.vardas << setw(15) << left << student.pavarde 
-		<< setw(15) << left << fixed << setprecision(2) << student.vid << setw(15) << left << &stud << endl;
+		<< setw(15) << left << fixed << setprecision(2) << student.vid << setw(15) << left << &student << endl;
 }
 
 void outputMedian(list<Stud>& stud)
 {
 	for (const Stud& student : stud)
 		cout << setw(18) << left << student.vardas << setw(15) << left << student.pavarde
-		<< setw(15) << left << fixed << setprecision(2) << student.med << setw(15) << left << &stud << endl;
+		<< setw(15) << left << fixed << setprecision(2) << student.med << setw(15) << left << &student << endl;
 
 }
 	
