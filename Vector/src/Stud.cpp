@@ -1,10 +1,13 @@
-﻿#include "Stud.h"
+#include "Stud.h"
 #include "Timer.h"
 
 
 void ived(Stud &Lok) 
 {
-	cin >> Lok.vardas >> Lok.pavarde;
+	string name, lastName;
+	cin >> name >> lastName;
+	Lok.setName(name);
+	Lok.setLastName(lastName);
 	cout << "Ar noretumete automatiskai sugeneruoti namu darbu ir egzamino rezultatus? (0 - taip, 1 - ne) " << endl;
 	int gchoice;
 	while (true) {
@@ -94,23 +97,23 @@ void ived(Stud &Lok)
 void outputMean(vector<Stud>& stud)
 {
 	for(const Stud& student : stud)
-		cout << setw(18) << left << student.vardas << setw(15) << left << student.pavarde 
+		cout << setw(18) << left << student.getName() << setw(15) << left << student.getLastName()
 		<< setw(15) << left << fixed << setprecision(2) << student.vid << setw(15) << left << &student << endl;
 }
 
 void outputMedian(vector<Stud>& stud)
 {
 	for (const Stud& student : stud)
-		cout << setw(18) << left << student.vardas << setw(15) << left << student.pavarde
-		<< setw(15) << left << fixed << setprecision(2) << student.med << setw(15) << left << &studsent << endl;
+		cout << setw(18) << left << student.getName() << setw(15) << left << student.getLastName()
+		<< setw(15) << left << fixed << setprecision(2) << student.med << setw(15) << left << &student << endl;
 
 }
 	
 
 void val(Stud &Lok)
 {
-	Lok.vardas.clear();
-	Lok.pavarde.clear();
+	Lok.setName("");      
+	Lok.setLastName("");
 	Lok.ND.clear();
 }
 
@@ -154,10 +157,10 @@ double mean(const vector <int>& ND)
 }
 
 bool sortByName(Stud& a, Stud& b) {
-	return a.vardas < b.vardas;
+	return a.getName() < b.getName();
 }
 bool sortBySurname(Stud& a, Stud& b) {
-	return a.pavarde < b.pavarde;
+	return a.getLastName() < b.getLastName();
 }
 bool sortDecending(Stud& a, Stud& b) {
 	return a.vid > b.vid;
