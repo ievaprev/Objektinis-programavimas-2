@@ -1,9 +1,20 @@
 #include "Mylib.h"
 
-struct Stud {
+class Stud {
+private:
 	string vardas, pavarde;
+public:
 	vector<int>ND;
 	double vid, med, egz;
+
+	Stud() : vardas(""), pavarde(""), vid(0), med(0), egz(0) {}
+
+	void setName(string tempVardas) {
+		vardas = tempVardas;}
+	string getName() const { return vardas;}
+	void setLastName(string tempPavarde) { 
+		pavarde = tempPavarde; }
+	string getLastName() const { return pavarde; }
 };
 
 void ived(Stud& Lok);
