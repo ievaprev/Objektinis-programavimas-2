@@ -17,8 +17,11 @@ void readFile(const string& fileName, vector<Stud>& stud) {
 			istringstream iss(line);
 			Stud Lok1;
 			int score;
+			string name, lastName;
+			iss >> lastName >> name;
 
-			iss >> Lok1.pavarde >> Lok1.vardas;
+			Lok1.setLastName(lastName);
+			Lok1.setName(name);
 
 			Lok1.ND.clear();
 			while (iss >> score) {
@@ -100,7 +103,7 @@ void outputFile(vector<Stud>& stud)
 
 	for (Stud& duom : stud)
 	{
-		cout << setw(18) << left << duom.pavarde << setw(15) << left << duom.vardas
+		cout << setw(18) << left << duom.getLastName() << setw(15) << left << duom.getLastName()
 			<< setw(3) << right << fixed << setprecision(2) << duom.vid << "                "
 			<< setw(3) << right << fixed << setprecision(2) << duom.med << endl;
 	}
@@ -118,7 +121,7 @@ void outputInFile(const string& fileName, vector<Stud>& stud)
 
 	for (Stud& duom : stud)
 	{
-		input << setw(18) << left << duom.pavarde << setw(15) << left << duom.vardas
+		input << setw(18) << left << duom.getLastName() << setw(15) << left << duom.getName()
 			<< setw(3) << right << fixed << setprecision(2) << duom.vid << endl;
 	}
 
