@@ -63,27 +63,31 @@ V0.2, v0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 fai
 **v1.1 atnaujinimai:** Programam nuo šiol naudoja class tipo realizacija, vietoje struct. \
 
 **Testavimui naudojamos didesnės apimties failai, norint išsiaiškinti kaip pokytis iš struct į class tipą paveikė didesnės apimties failų veikimo spartą.**
+Naudojama 3 grupavimo strategija ir lists.
+
 ### Failas: Studentai 1000000
-| VEIKSMAS | VYKDYMO VID.(list-3str) |
-| --- | --- |
-| Failo nuskaitymas                 | 6.109984 s|
-| Failo rušiavimas                  | 0.2250646 s|
-| Failo grupavimas                  | 0.08983824 s|
-| Studentų išvedimas į smart failą  | 0.6137734 s|
-| Studentų išvedimas į dumb failą   | 0.422014 s|
+| VEIKSMAS | VYKDYMO VID.(struct - lst) | VYKDYMO VID.(class - lst) |
+| --- | --- | --- |
+| Failo nuskaitymas                 | 6.109984 s| 7.88116 s|
+| Failo rušiavimas                  | 0.2250646 s| 0.32491 s|
+| Failo grupavimas                  | 0.08983824 s| 0.10684 s|
+| Studentų išvedimas į smart failą  | 0.6137734 s| 0.76192 s|
+| Studentų išvedimas į dumb failą   | 0.422014 s| 0.55333 s|
 
 ----------------------
 
 ### Failas: Studentai 10000000
 
-| VEIKSMAS | VYKDYMO VID.(list-3str) |
-| --- | --- |
-| Failo nuskaitymas                  | 57.26326 s|
-| Failo rušiavimas                   | 2.928294 s|
-| Failo grupavimas                    | 0.8334702 s|
-| Studentų išvedimas į smart failą   | 5.74896 s|
-| Studentų išvedimas į dumb failą    | 3.777118 s|
+| VEIKSMAS | VYKDYMO VID.(struct - lst) | VYKDYMO VID.(class - lst) |
+| --- | --- | --- |
+| Failo nuskaitymas                  | 57.26326 s| 77.97883 s|
+| Failo rušiavimas                   | 2.928294 s| 4.32859 s|
+| Failo grupavimas                    | 0.8334702 s| 1.20533 s|
+| Studentų išvedimas į smart failą   | 5.74896 s| 7.71917 s|
+| Studentų išvedimas į dumb failą    | 3.777118 s| 5.48454 s|
 
+**Testavimo išvados: **
+* Naudojant class vietoj struct programos veikimo efektyvumas sumažėja, tačiau tai gali būti dėl to, nes class paprastai turi daugiau funkcionalumo, pavyzdžiui, įtrauktus metodus ir papildomas saugumo savybes, kurios gali padidinti atminties ir procesoriaus naudojimą
 ----------------------
   
 # V1.0
