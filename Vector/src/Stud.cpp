@@ -1,6 +1,36 @@
 #include "Stud.h"
 #include "Timer.h"
 
+Stud::Stud(std::istream& is) {
+
+	readStudent(is);
+}
+std::istream& Stud::readStudent(std::istream& is) {
+	string name, lastName;
+
+	is >> lastName >> name;
+	setLastName(lastName);
+	setName(name);
+
+	ND.clear();
+	int grade;
+
+	while (is >> grade) {
+		if (grade < 1 || grade > 10) {
+			throw std::runtime_error("Error: ND score must be between 1 and 10");
+		}
+		ND.push_back(grade);
+	}
+
+	if (ND.empty()) {
+		throw std::runtime_error("Error: No ND scores found for student");
+	}
+
+	egz = ND.back();
+	ND.pop_back();  
+
+	return is;
+}
 
 void ived(Stud &Lok) 
 {
