@@ -1,9 +1,25 @@
 #include "Mylib.h"
 
-struct Stud {
+class Stud {
+private:
 	string vardas, pavarde;
+public:
 	vector<int>ND;
 	double vid, med, egz;
+
+	Stud() : egz(0) { }
+	Stud(std::istream& is);
+	void setName(string tempVardas) {
+		vardas = tempVardas;
+	}
+	inline string getName() const { return vardas; }
+	void setLastName(string tempPavarde) {
+		pavarde = tempPavarde;
+	}
+	inline string getLastName() const { return pavarde; }
+	std::istream& readStudent(std::istream&);
+
+	~Stud() = default;
 };
 
 void ived(Stud& Lok);
