@@ -5,18 +5,18 @@
 void readFile(const string& fileName, vector<Stud>& stud) {
 
 	Timer r;
-	std::ifstream inFile(fileName);
+	ifstream inFile(fileName);
 
 	try {
 		if (!inFile.is_open()) {
-			throw std::runtime_error("Error: unable to open file: " + fileName);
+			throw runtime_error("Error: unable to open file: " + fileName);
 		}
 
-		std::string line;
-		std::getline(inFile, line);
+		string line;
+		getline(inFile, line);
 
-		while (std::getline(inFile, line)) {
-			std::istringstream iss(line);  
+		while (getline(inFile, line)) {
+			istringstream iss(line);  
 			Stud Lok1(iss);  
 
 			stud.push_back(Lok1);  
@@ -26,7 +26,7 @@ void readFile(const string& fileName, vector<Stud>& stud) {
 
 	}
 	catch (const std::exception& e) {
-		std::cerr << e.what() << std::endl;
+		cerr << e.what() << endl;
 		exit(EXIT_FAILURE);  
 	}
 
