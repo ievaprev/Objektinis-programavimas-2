@@ -7,14 +7,18 @@ public:
 	vector<int>ND;
 	double vid, med, egz;
 
-	Stud() : vardas(""), pavarde(""), vid(0), med(0), egz(0) {}
-
+	Stud() : egz(0) { }
+	Stud(std::istream& is);
 	void setName(string tempVardas) {
 		vardas = tempVardas;}
-	string getName() const { return vardas;}
+	inline string getName() const { return vardas;}
 	void setLastName(string tempPavarde) { 
 		pavarde = tempPavarde; }
-	string getLastName() const { return pavarde; }
+	inline string getLastName() const { return pavarde;}
+	std::istream& readStudent(std::istream&);
+
+	~Stud() = default;
+
 };
 
 void ived(Stud& Lok);
