@@ -248,8 +248,8 @@ Buvo testuojama programa naudojant dvi skirtingas struktūras: ```std::vector```
 
 ### Failas: Studentai 10000
 
-| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
-| --- | --- | --- |
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) |
+| --- | --- | 
 | Failo nuskaitymas | 0.0985081333 s | 
 | Failo grupavimas  | 0.0076673167 s | 
 | Failo rušiavimas  | 0.0052359 s | 
@@ -260,8 +260,8 @@ Buvo testuojama programa naudojant dvi skirtingas struktūras: ```std::vector```
 
 ### Failas: Studentai 100000
 
-| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
-| --- | --- | --- |
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | 
+| --- | --- | 
 | Failo nuskaitymas | 0.751953875 s | 
 | Failo grupavimas  | 0.0603202 s | 
 | Failo rušiavimas  | 0.0599166875 s | 
@@ -272,8 +272,8 @@ Buvo testuojama programa naudojant dvi skirtingas struktūras: ```std::vector```
 
 ### Failas: Studentai 1000000
 
-| VEIKSMAS | VYKDYMO VIDURKIS(vector) | VYKDYMO VIDURKIS(list) |
-| --- | --- | --- |
+| VEIKSMAS | VYKDYMO VIDURKIS(vector) | 
+| --- | --- |
 | Failo nuskaitymas | 8.2884075 s |
 | Failo grupavimas  | 0.851942625 s |
 | Failo rušiavimas  | 0.71661653 s | 
