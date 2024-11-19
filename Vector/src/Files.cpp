@@ -1,54 +1,33 @@
 #include "Stud.h"
 #include "Timer.h"
 
+
 void readFile(const string& fileName, vector<Stud>& stud) {
 
 	Timer r;
-	ifstream inFile(fileName);
-
+	std::ifstream inFile(fileName);
 
 	try {
 		if (!inFile.is_open()) {
-			throw runtime_error("Error: unable to open file: " + fileName);
+			throw std::runtime_error("Error: unable to open file: " + fileName);
 		}
-		string line;
-		getline(inFile, line);
-		while (getline(inFile, line)) {
-			istringstream iss(line);
-			Stud Lok1;
-			int score;
-			string name, lastName;
-			iss >> lastName >> name;
 
-			Lok1.setLastName(lastName);
-			Lok1.setName(name);
+		std::string line;
+		std::getline(inFile, line);
 
-			Lok1.ND.clear();
-			while (iss >> score) {
-				Lok1.ND.push_back(score);
-			}
+		while (std::getline(inFile, line)) {
+			std::istringstream iss(line);  
+			Stud Lok1(iss);  
 
-			if (Lok1.ND.empty()) {
-				cerr << "Error: No ND scores found in line " << endl;
-				continue;
-			}
-			for (int i = 0; i < Lok1.ND.size(); i++) {
-				if (Lok1.ND.at(i) < 1 || Lok1.ND.at(i) > 10) {
-					throw runtime_error("Error: ND score must be between 1 and 10");
-				}
-			}
-
-			Lok1.egz = Lok1.ND.back();
-			Lok1.ND.pop_back();
-
-			stud.push_back(Lok1);
-
+			stud.push_back(Lok1);  
 		}
-		inFile.close();
+
+		inFile.close(); 
+
 	}
-	catch (exception& e) {
-		cerr << e.what() << endl;
-		exit(EXIT_FAILURE);
+	catch (const std::exception& e) {
+		std::cerr << e.what() << std::endl;
+		exit(EXIT_FAILURE);  
 	}
 
 	cout << "Failo " << fileName <<" nuskaitymas uztruko : " << r.elapsed() << " s\n";
