@@ -48,6 +48,8 @@ Sukompiliuojame kodą, sukuriame .exe failą:
    ```
    cmake --build . --config Release
    ```
+Lengvesniam paleidimui unzipinus projektą paleiskite **run.bat** failą.  
+
 ----------------------
 ## Testavimas
 V0.2, v0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 failus. Testavimas buvo atliktas **6** kartus, o gauti programos vykdymo laikai buvo panaudoti vidurkiui apskaičiuoti. Buvo naudojami dviejų tipų konteineriai: ```std::vector``` ir ```std::list```. Žemiau pateikiamos v0.2, v0.3 ir v1.0 dalių testavimo rezultatų suvestinės.
@@ -56,6 +58,33 @@ V0.2, v0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 fai
 * CPU: Intel(R) Core(TM) Ultra 7 155H **3.80 GHz**
 * RAM: 16 GB
 * SDD: 1 TB
+
+# V1.1
+**v1.1 atnaujinimai:** Programam nuo šiol naudoja class tipo realizacija, vietoje struct. \
+
+**Testavimui naudojamos didesnės apimties failai, norint išsiaiškinti kaip pokytis iš struct į class tipą paveikė didesnės apimties failų veikimo spartą.**
+### Failas: Studentai 1000000
+| VEIKSMAS | VYKDYMO VID.(list-3str) |
+| --- | --- |
+| Failo nuskaitymas                 | 6.109984 s|
+| Failo rušiavimas                  | 0.2250646 s|
+| Failo grupavimas                  | 0.08983824 s|
+| Studentų išvedimas į smart failą  | 0.6137734 s|
+| Studentų išvedimas į dumb failą   | 0.422014 s|
+
+----------------------
+
+### Failas: Studentai 10000000
+
+| VEIKSMAS | VYKDYMO VID.(list-3str) |
+| --- | --- |
+| Failo nuskaitymas                  | 57.26326 s|
+| Failo rušiavimas                   | 2.928294 s|
+| Failo grupavimas                    | 0.8334702 s|
+| Studentų išvedimas į smart failą   | 5.74896 s|
+| Studentų išvedimas į dumb failą    | 3.777118 s|
+
+----------------------
   
 # V1.0
 **v1.0 atnaujinimas:** Vartotojui suteikta galimybė pasirinkti, kokią strategiją jis/ji nori naudoti atliekant studentų grupavimą. 
