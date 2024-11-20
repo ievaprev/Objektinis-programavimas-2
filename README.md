@@ -107,17 +107,23 @@ Naudojama 3 grupavimo strategija ir lists.
 ### Struct - list
 | FLAG | LAIKAS | .exe FAILO DYDIS |
 | --- | --- | --- |
-| -O1 | | |
-| -O2 | | |
-| -O3 | | |
+| -O1 | 169.1964 s | 162.8779 KB |
+| -O2 | 162.7343 s | 161.9873 KB |
+| -O3 | 163.4852 s | 165.8007 KB |
 
 ### Struct - vector
 | FLAG | LAIKAS | .exe FAILO DYDIS |
 | --- | --- | --- |
-| -O1 | | |
-| -O2 | | |
-| -O3 | | |
- 
+| -O1 | 137.7089 s | 191.4091 KB |
+| -O2 | 125.9297 s | 185.9580 KB |
+| -O3 | 125.8531 s | 203.1005 KB |
+
+ **Eksperimento tyrimo išvados:**
+*  Naudojant vektorių, vykdomojo failo dydis buvo žymiai didesnis (iki 203 KB), o mažiausias dydis užfiksuotas struktūros su list atveju (~161 KB).
+* -O2 optimizacija pasiūlė geriausią balansą tarp vykdymo laiko ir failo dydžio; -O3 dažnai pagerindavo tik laiką, bet padidindavo failo dydį.
+* Struktūra buvo efektyvesnė pagal laiką visais atvejais, tačiau klasės su vektoriumi našumas buvo panašus į struktūrą su vektoriumi.
+
+Rekomendacijos: Struktūros su vektoriumi kombinacija ir -O2 optimizacija yra tinkamiausia, jei svarbus greitis, o struktūra su sąrašu – jei prioritetas mažas failo dydis.
 ----------------------
   
 # V1.0
