@@ -100,9 +100,9 @@ Naudojama 3 grupavimo strategija ir lists.
 ### Class - vector
 | FLAG | LAIKAS | .exe FAILO DYDIS |
 | --- | --- | --- |
-| -O1 | | |
-| -O2 | | |
-| -O3 | | |
+| -O1 | 140.3943 s | 185.3867 KB |
+| -O2 | 139.7370 s | 180.3212 KB |
+| -O3 |  138.5772 s | 218.7763 KB |
 
 ### Struct - list
 | FLAG | LAIKAS | .exe FAILO DYDIS |
