@@ -88,6 +88,36 @@ Naudojama 3 grupavimo strategija ir lists.
 
 **Testavimo išvados: **
 * Naudojant class vietoj struct programos veikimo efektyvumas sumažėja, tačiau tai gali būti dėl to, nes class paprastai turi daugiau funkcionalumo, pavyzdžiui, įtrauktus metodus ir papildomas saugumo savybes, kurios gali padidinti atminties ir procesoriaus naudojimą
+
+## Struct ir Klasės versija ištirta su optimizavimo "flagais" (yra lentelė: greitis, exe failo dydis)
+### Class - list
+| FLAG | LAIKAS | .exe FAILO DYDIS |
+| --- | --- | --- |
+| -O1 | 181.3833 s | 163.8496 KB |
+| -O2 | 168.82811 s | 163.7412 KB |
+| -O3 | 170.6521 s | 168.7304 KB |
+
+### Class - vector
+| FLAG | LAIKAS | .exe FAILO DYDIS |
+| --- | --- | --- |
+| -O1 | | |
+| -O2 | | |
+| -O3 | | |
+
+### Struct - list
+| FLAG | LAIKAS | .exe FAILO DYDIS |
+| --- | --- | --- |
+| -O1 | | |
+| -O2 | | |
+| -O3 | | |
+
+### Struct - vector
+| FLAG | LAIKAS | .exe FAILO DYDIS |
+| --- | --- | --- |
+| -O1 | | |
+| -O2 | | |
+| -O3 | | |
+ 
 ----------------------
   
 # V1.0
