@@ -124,6 +124,7 @@ Naudojama 3 grupavimo strategija ir lists.
 * Struktūra buvo efektyvesnė pagal laiką visais atvejais, tačiau klasės su vektoriumi našumas buvo panašus į struktūrą su vektoriumi.
 
 Rekomendacijos: Struktūros su vektoriumi kombinacija ir -O2 optimizacija yra tinkamiausia, jei svarbus greitis, o struktūra su sąrašu – jei prioritetas mažas failo dydis.
+
 ----------------------
   
 # V1.0
