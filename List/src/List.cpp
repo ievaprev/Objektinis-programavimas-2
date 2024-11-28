@@ -167,13 +167,12 @@ int main() {
                 cin >> textFile;
                 Temp.input(textFile, List1);
 
-                cout << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas"
-                    << setw(10) << right << "Galutinis (Vid.)" << "    "
-                    << setw(10) << right << "Galutinis (Med.)" << endl;
+                cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde"
+                    << setw(15) << left << "Galutinis bal." << setw(15) << left << "Struct Adresas" << endl;
                 for (Stud& student : List1) {
                     finalgrade(student);
                 }
-                Temp.output(List1);
+                Temp.output(List1, 1);
             }
         }
     }
