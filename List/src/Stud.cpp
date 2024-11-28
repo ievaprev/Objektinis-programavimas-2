@@ -1,38 +1,33 @@
 #include "Stud.h"
 #include "Timer.h"
 
-Stud::Stud(std::istream& is) {
-
-	readStudent(is);
-}
-std::istream& Stud::readStudent(std::istream& is) {
+std::istream& operator>>(std::istream& is, Stud& student) {
 	string name, lastName;
 
 	is >> lastName >> name;
-	setLastName(lastName);
-	setName(name);
+	student.setLastName(lastName);
+	student.setName(name);
 
-	ND.clear();
+	student.ND.clear();
 	int grade;
-
 	while (is >> grade) {
 		if (grade < 1 || grade > 10) {
 			throw std::runtime_error("Error: ND score must be between 1 and 10");
 		}
-		ND.push_back(grade);
+		student.ND.push_back(grade);
 	}
 
-	if (ND.empty()) {
+	if (student.ND.empty()) {
 		throw std::runtime_error("Error: No ND scores found for student");
 	}
 
-	egz = ND.back();
-	ND.pop_back();
+	student.egz = student.ND.back();
+	student.ND.pop_back();
 
 	return is;
 }
 
-void ived(Stud &Lok) 
+void Stud::input(Stud &Lok) 
 {
 	string vardas, pavarde;
 	cin >> vardas >> pavarde;
@@ -125,19 +120,21 @@ void ived(Stud &Lok)
 	}
 }
 
-void outputMean(list<Stud>& stud)
+void Stud::output(list<Stud>& stud, int choice)
 {
-	for(const Stud& student : stud)
-		cout << setw(18) << left << student.getName() << setw(15) << left << student.getLastName()
-		<< setw(15) << left << fixed << setprecision(2) << student.vid << setw(15) << left << &student << endl;
-}
+	if (choice == 0) {
+		for (const Stud& student : stud)
+			cout << setw(18) << left << student.getName() << setw(15) << left << student.getLastName()
+			<< setw(15) << left << fixed << setprecision(2) << student.vid << setw(15) << left << &student << endl;
 
-void outputMedian(list<Stud>& stud)
-{
-	for (const Stud& student : stud)
-		cout << setw(18) << left << student.getName() << setw(15) << left << student.getLastName()
-		<< setw(15) << left << fixed << setprecision(2) << student.med << setw(15) << left << &student << endl;
-
+	}
+	else
+	{
+		for (const Stud& student : stud)
+				cout << setw(18) << left << student.getName() << setw(15) << left << student.getLastName()
+				<< setw(15) << left << fixed << setprecision(2) << student.med << setw(15) << left << &student << endl;
+	}
+	
 }
 	
 
@@ -216,4 +213,36 @@ void sortByChoice(list<Stud>& stud, const int& choice) {
 	}
 
 	cout << "Surikiuoti studentus, pagal jusu pasirinkima, uztruko: " << t.elapsed() << " s\n" << endl;
+}
+
+void demonstration() {
+
+	cout << "Rule of three demonstracija:" << endl;
+
+	Stud Temp1("Prev", "Ieva", { 6, 7, 8, 9 }, 8);
+
+	finalgrade(Temp1);
+	
+	cout << "1 Objektas:                          " << setw(10) << left << Temp1.getName() << setw(10) << left << Temp1.getLastName() << 
+		setw(30) << left << Temp1.vid << setw(15) << endl;
+	cout << "---------------------" << endl;
+
+	Stud Temp2(Temp1);
+
+	cout << "2 Objektas, kopija 1 objekto:        " << setw(10) << left << Temp2.getName() << 
+		setw(10) << left << Temp2.getLastName() << setw(30) << left << Temp2.vid << setw(15) << endl;
+	cout << "---------------------" << endl;
+
+	Stud Temp3("Bor", "Ema", { 4, 10, 3, 9 }, 9);
+	finalgrade(Temp3);
+
+	cout << "3 Objektas pries copy assigment:     " << setw(10) << left << Temp3.getName() << setw(10) << left << Temp3.getLastName() 
+		<< setw(30) << left << Temp3.vid << setw(15) << endl;
+	cout << "---------------------" << endl;
+
+	Temp3 = Temp1;
+
+	cout << "3 Objektas po copy assigment:        " << setw(10) << left << Temp3.getName() << setw(10) << left << Temp3.getLastName() << setw(30) << left << Temp3.vid << setw(15) << endl;
+	cout << "---------------------" << endl;
+
 }
