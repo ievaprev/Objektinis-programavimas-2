@@ -19,6 +19,8 @@ int main() {
     */
     int textAts, genrAts, whichAts, sortAts, n, finalChoice, strategy;
 
+    demonstration();
+
     cout << "Ar norite nuskaityti informacija is tekstinio failo? (0 - taip, 1 - ne)" << endl;
 
     string textFile;
@@ -71,7 +73,7 @@ int main() {
 
             for (int i = 0; i < 5; i++)
             {
-                generateFile("studentai" + to_string(b) + ".txt", b);
+                Temp.input("studentai" + to_string(b) + ".txt", b);
                 b *= 10;
             }
 
@@ -104,7 +106,7 @@ int main() {
                 for (int i = 0; i < 5; i++) {
                     cout << "----------------------------------" << endl;
 
-                    readFile("studentai" + to_string(b) + ".txt", Vec1);
+                    Temp.input("studentai" + to_string(b) + ".txt", Vec1);
 
                     cout << "Pasirinkite pagal ka noretumete rusiuoti sugrupuotus studentus:\n1 - varda, 2 - pavarde, 3 - galutini rezultata maz., 4 - galutini rezultata did." << endl;
 
@@ -139,31 +141,31 @@ int main() {
                     if (strategy == 1) {
                         grouping1(smart, dumb, Vec1);
                         cout << "    " << endl;
-                        outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
-                        outputInFile("Dumb studentai" + to_string(b) + ".txt", dumb);
+                        Temp.output("Smart studentai" + to_string(b) + ".txt", smart);
+                        Temp.output("Dumb studentai" + to_string(b) + ".txt", dumb);
                     }
                     else if (strategy == 2) {
                         grouping2(smart, Vec1);
                         cout << "    " << endl;
-                        outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
-                        outputInFile("Dumb studentai" + to_string(b) + ".txt", Vec1);
+                        Temp.output("Smart studentai" + to_string(b) + ".txt", smart);
+                        Temp.output("Dumb studentai" + to_string(b) + ".txt", Vec1);
                     }
                     else if (strategy == 3) {
                         grouping3(smart, Vec1);
                         cout << "    " << endl;
-                        outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
-                        outputInFile("Dumb studentai" + to_string(b) + ".txt", Vec1);
+                        Temp.output("Smart studentai" + to_string(b) + ".txt", smart);
+                        Temp.output("Dumb studentai" + to_string(b) + ".txt", Vec1);
                     }
 
                     b *= 10;
-                    system("pause");
+                   
                 }
 
             }
             else {
                 cout << "Pateikite failo varda: " << endl;
                 cin >> textFile;
-                readFile(textFile, Vec1);
+                Temp.input(textFile, Vec1);
 
                 cout << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas"
                     << setw(10) << right << "Galutinis (Vid.)" << "    "
@@ -171,7 +173,7 @@ int main() {
                 for (Stud& student : Vec1) {
                     finalgrade(student);
                 }
-                outputFile(Vec1);
+                Temp.output(Vec1);
             }
         }
     }
@@ -196,7 +198,7 @@ int main() {
         for (int i = 0; i < n; i++)
         {
             cout << "Studento vardas, pavarde: " << endl;
-            ived(Temp);
+            Temp.input(Temp);
             finalgrade(Temp);
             Vec1.push_back(Temp);
             val(Temp);
@@ -226,11 +228,6 @@ int main() {
         cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde"
             << setw(15) << left << "Galutinis bal." << setw(15) << left << "Struct Adresas" << endl;
 
-        if (finalChoice == 0) {
-            outputMean(Vec1);
-        }
-        else if (finalChoice == 1) {
-            outputMedian(Vec1);
-        }
+        Temp.output(Vec1, finalChoice);
     }
 }
