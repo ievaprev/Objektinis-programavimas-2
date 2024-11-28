@@ -33,7 +33,6 @@ public:
 	void input(const string& fileName, const int& number);
 	void input(const string& fileName, list <Stud>& stud);
 	void output(list<Stud>& stud, int choice);
-	void output(list<Stud>& stud);
 	void output(const string& fileName, list<Stud>& stud);
 
 	~Stud() {}//I. destruktorius
