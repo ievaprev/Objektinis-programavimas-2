@@ -1,7 +1,7 @@
 #include "Stud.h"
 #include "Timer.h"
 
-void readFile(const string& fileName, list<Stud>& stud) {
+void Stud::input(const string& fileName, list<Stud>& stud) {
 
 	Timer r;
 	ifstream inFile(fileName);
@@ -16,8 +16,8 @@ void readFile(const string& fileName, list<Stud>& stud) {
 
 		while (getline(inFile, line)) {
 			istringstream iss(line);
-			Stud Lok1(iss);
 
+			Stud Lok1(iss); //copy constructor
 			stud.push_back(Lok1);
 		}
 
@@ -32,7 +32,7 @@ void readFile(const string& fileName, list<Stud>& stud) {
 }
 
 
-void generateFile(const string& fileName, const int& number)
+void Stud::input(const string& fileName, const int& number)
 {
 	Timer t;
 
@@ -76,7 +76,7 @@ void generateFile(const string& fileName, const int& number)
 
 }
 
-void outputFile(list<Stud>& stud)
+void Stud::output(list<Stud>& stud)
 {
 	stud.sort(sortByName);
 
@@ -88,7 +88,7 @@ void outputFile(list<Stud>& stud)
 	}
 }
 
-void outputInFile(const string& fileName, list<Stud>& stud)
+void Stud::output(const string& fileName, list<Stud>& stud)
 {
 	Timer t; 
 	stringstream input;
