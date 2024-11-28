@@ -2,12 +2,12 @@
 #include "Stud.h"
 #include "Timer.h"
 
-int main(){
+int main() {
 
     list<Stud> List1;
-    list<Stud> smart, dumb; 
+    list<Stud> smart, dumb;
     Stud Temp;
-
+   
     /*
     textAts - the choice of whether you want to read information from a file or not
     genrAts - the choice of whether you want to generate new files or not
@@ -19,33 +19,35 @@ int main(){
     */
     int textAts, genrAts, whichAts, sortAts, n, finalChoice, strategy;
 
+    demonstration();
+
     cout << "Ar norite nuskaityti informacija is tekstinio failo? (0 - taip, 1 - ne)" << endl;
-    
-    string textFile; 
+
+    string textFile;
 
     while (true) {
         try {
-            if (!(cin >> textAts)) {  
-                cin.clear(); 
-                cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+            if (!(cin >> textAts)) {
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 throw invalid_argument("Klaida: prasome ivesti skaiciu, o ne raide.");
             }
 
-            if (textAts != 0 && textAts != 1) {  
+            if (textAts != 0 && textAts != 1) {
                 throw runtime_error("Klaida: prasome pasirinkti 0 - taip arba 1 - ne.");
             }
 
-            break;  
+            break;
         }
         catch (const exception& e) {
-            cerr << e.what() << endl;  
-  
+            cerr << e.what() << endl;
+
         }
     }
 
     if (textAts == 0) {
         cout << "Ar norite sugeneruoti naujus failus? (0 - taip, 1 - ne)" << endl;
-    
+
         while (true) {
             try {
                 if (!(cin >> genrAts)) {
@@ -66,18 +68,18 @@ int main(){
         }
 
         if (genrAts == 0) {
-            
+
             int b = 1000;
 
             for (int i = 0; i < 5; i++)
             {
-                generateFile("studentai" + to_string(b) + ".txt", b);
+                Temp.input("studentai" + to_string(b) + ".txt", b);
                 b *= 10;
             }
-            
+
         }
         else {
-           
+
             cout << "Ar norite nuskaityti generuotus failus ar savo turimus?(0 - generuotus, 1 - turimus)" << endl;
 
             while (true) {
@@ -104,10 +106,10 @@ int main(){
                 for (int i = 0; i < 5; i++) {
                     cout << "----------------------------------" << endl;
 
-                    readFile("studentai" + to_string(b) + ".txt", List1);
+                    Temp.input("studentai" + to_string(b) + ".txt", List1);
 
                     cout << "Pasirinkite pagal ka noretumete rusiuoti sugrupuotus studentus:\n1 - varda, 2 - pavarde, 3 - galutini rezultata maz., 4 - galutini rezultata did." << endl;
-                   
+
                     while (true) {
                         try {
                             if (!(cin >> sortAts)) {
@@ -139,20 +141,20 @@ int main(){
                     if (strategy == 1) {
                         grouping1(smart, dumb, List1);
                         cout << "    " << endl;
-                        outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
-                        outputInFile("Dumb studentai" + to_string(b) + ".txt", dumb);
+                        Temp.output("Smart studentai" + to_string(b) + ".txt", smart);
+                        Temp.output("Dumb studentai" + to_string(b) + ".txt", dumb);
                     }
                     else if (strategy == 2) {
                         grouping2(smart, List1);
                         cout << "    " << endl;
-                        outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
-                        outputInFile("Dumb studentai" + to_string(b) + ".txt", List1);
+                        Temp.output("Smart studentai" + to_string(b) + ".txt", smart);
+                        Temp.output("Dumb studentai" + to_string(b) + ".txt", List1);
                     }
                     else if (strategy == 3) {
                         grouping3(smart, List1);
                         cout << "    " << endl;
-                        outputInFile("Smart studentai" + to_string(b) + ".txt", smart);
-                        outputInFile("Dumb studentai" + to_string(b) + ".txt", List1);
+                        Temp.output("Smart studentai" + to_string(b) + ".txt", smart);
+                        Temp.output("Dumb studentai" + to_string(b) + ".txt", List1);
                     }
 
                     b *= 10;
@@ -163,15 +165,15 @@ int main(){
             else {
                 cout << "Pateikite failo varda: " << endl;
                 cin >> textFile;
-                readFile(textFile, List1);
+                Temp.input(textFile, List1);
 
-                cout << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas" 
-                << setw(10) << right << "Galutinis (Vid.)" << "    "
-                << setw(10) << right << "Galutinis (Med.)" << endl;
+                cout << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas"
+                    << setw(10) << right << "Galutinis (Vid.)" << "    "
+                    << setw(10) << right << "Galutinis (Med.)" << endl;
                 for (Stud& student : List1) {
                     finalgrade(student);
                 }
-                outputFile(List1);
+                Temp.output(List1);
             }
         }
     }
@@ -192,18 +194,20 @@ int main(){
                 cerr << e.what() << endl;
             }
         }
-        
-        for (int i = 0; i < n; i++) 
+
+        for (int i = 0; i < n; i++)
         {
             cout << "Studento vardas, pavarde: " << endl;
-            ived(Temp);
+            Temp.input(Temp);
             finalgrade(Temp);
+
             List1.push_back(Temp);
+
             val(Temp);
         }
 
-        cout << "Ar norite galutini ivertinima skaiciuoti su mediana ar vidurkiu? (0 - vidurkiu, 1 - mediana)"  << endl;
-       
+        cout << "Ar norite galutini ivertinima skaiciuoti su mediana ar vidurkiu? (0 - vidurkiu, 1 - mediana)" << endl;
+
         while (true) {
             try {
                 if (!(cin >> finalChoice)) {
@@ -222,16 +226,10 @@ int main(){
                 cerr << e.what() << endl;
             }
         }
-    
-        cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde" 
+
+        cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde"
             << setw(15) << left << "Galutinis bal." << setw(15) << left << "Struct Adresas" << endl;
 
-        if (finalChoice == 0){
-            outputMean(List1);
-        }
-        else if (finalChoice == 1){
-            outputMedian(List1);
-        }
+        Temp.output(List1, finalChoice);
     }
 }
-
