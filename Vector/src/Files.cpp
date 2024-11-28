@@ -2,7 +2,7 @@
 #include "Timer.h"
 
 
-void readFile(const string& fileName, vector<Stud>& stud) {
+void Stud::input(const string& fileName, vector<Stud>& stud) {
 
 	Timer r;
 	ifstream inFile(fileName);
@@ -16,25 +16,24 @@ void readFile(const string& fileName, vector<Stud>& stud) {
 		getline(inFile, line);
 
 		while (getline(inFile, line)) {
-			istringstream iss(line);  
-			Stud Lok1(iss);  
+			istringstream iss(line);
 
-			stud.push_back(Lok1);  
+			Stud Lok1(iss);  //copy constructor
+			stud.push_back(Lok1);
 		}
 
-		inFile.close(); 
-
+		inFile.close();
 	}
-	catch (const std::exception& e) {
+	catch (const exception& e) {
 		cerr << e.what() << endl;
-		exit(EXIT_FAILURE);  
+		exit(EXIT_FAILURE);
 	}
 
-	cout << "Failo " << fileName <<" nuskaitymas uztruko : " << r.elapsed() << " s\n";
+	cout << "Failo " << fileName << " nuskaitymas uztruko : " << r.elapsed() << " s\n";
 }
 
 
-void generateFile(const string& fileName, const int& number)
+void Stud::input(const string& fileName, const int& number)
 {
 	Timer t;
 
@@ -76,7 +75,7 @@ void generateFile(const string& fileName, const int& number)
 
 }
 
-void outputFile(vector<Stud>& stud)
+void Stud::output(vector<Stud>& stud)
 {
 	sort(stud.begin(), stud.end(), sortByName);
 
@@ -88,7 +87,7 @@ void outputFile(vector<Stud>& stud)
 	}
 }
 
-void outputInFile(const string& fileName, vector<Stud>& stud)
+void Stud::output(const string& fileName, vector<Stud>& stud)
 {
 	Timer t; 
 	stringstream input;
