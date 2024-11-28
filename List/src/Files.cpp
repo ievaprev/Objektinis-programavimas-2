@@ -76,18 +76,6 @@ void Stud::input(const string& fileName, const int& number)
 
 }
 
-void Stud::output(list<Stud>& stud)
-{
-	stud.sort(sortByName);
-
-	for (Stud& duom : stud)
-	{
-		cout << setw(18) << left << duom.getLastName() << setw(15) << left << duom.getName()
-			<< setw(3) << right << fixed << setprecision(2) << duom.vid << "                "
-			<< setw(3) << right << fixed << setprecision(2) << duom.med << endl;
-	}
-}
-
 void Stud::output(const string& fileName, list<Stud>& stud)
 {
 	Timer t; 
