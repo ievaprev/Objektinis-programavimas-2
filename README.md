@@ -58,6 +58,24 @@ V0.2, v0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 fai
 * CPU: Intel(R) Core(TM) Ultra 7 155H **3.80 GHz**
 * RAM: 16 GB
 * SDD: 1 TB
+  
+# v1.2
+**v1.2 atnaujinimai:** 
+* Realizuota rule of three (destructor, copy constructor and copy assigment) turimai Stud klasei.
+* Sukurti įvesties ir išvestie operatoriai
+* Perdengti įvesties ir išvesties metodai darbui su Studentų klasę.
+
+## Plačiau apie Įvesties ir išvesties metodų perdengimą 
+Sukurti keli metodus su tuo pačiu pavadinimu. Kitaip tariant duomenų iš failo nuskaitymo, failu generavimo ir duomenų nuskaitymo rankiniu būdu metodai dabar turi vienodus pavadinimus, bet atlieka skirtingas funkcijas.
+
+**Įvesties metodų perdengimas:**
+* ```void input(Stud& Lok);``` - metodas naudojamas studentų nuskaitymui, kai informacija įvedama rankiniu būdu
+* ```void input(const string& fileName, const int& number);``` - metodas naudojamas studentų informacijos generavimui naujuose failuose
+* ```void input(const string& fileName, list <Stud>& stud);``` - metodas naudojamas studentų failų nuskaitymui
+
+**Išvesties metodų perdengimas:**
+* ```void output(list<Stud>& stud, int choice);``` - metodas naudojamas studentų duomenų išvedimui į terminalą
+* ```void output(const string& fileName, list<Stud>& stud);``` - metodas naudojamas studentų duomenų išvedimui į failus
 
 # V1.1
 **v1.1 atnaujinimai:** Programam nuo šiol naudoja class tipo realizacija, vietoje struct. \
