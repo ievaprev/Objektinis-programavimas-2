@@ -82,14 +82,13 @@ void Stud::output(const string& fileName, list<Stud>& stud)
 	stringstream input;
 	
 
-	input << setw(18) << left << "Pavarde" << setw(15) << left << "Vardas"
+	input << setw(18) << left << "Vardas" << setw(15) << left << "Pavarde"
 		<< setw(10) << right << "Galutinis (Vid.)" << endl;
 
 
 	for (Stud& duom : stud)
 	{
-		input << setw(18) << left << duom.getLastName() << setw(15) << left << duom.getName()
-			<< setw(3) << right << fixed << setprecision(2) << duom.vid << endl;
+		input << fixed << setprecision(2) << duom << endl;
 	}
 
 	ofstream outfile(fileName);
