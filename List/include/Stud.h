@@ -1,32 +1,22 @@
 #include "Mylib.h"
+#include "Human.h"
 
-class Stud {
-private:
-	string vardas, pavarde;
+class Stud : public Human {
 public:
 	vector<int>ND;
 	double vid, med, egz;
 
-	Stud() : vardas(""), pavarde(""), vid(0), med(0), egz(0) {}
+	Stud() : vid(0), med(0), egz(0) {}
 	Stud(string vardas, string pavarde, vector<int> nd, int egz) : 
-		vardas(vardas), pavarde(pavarde), ND(nd), egz(egz), vid(0), med(0) {}
+		 Human(vardas,pavarde), ND(nd), egz(egz), vid(0), med(0) {}
 
 	Stud(std::istream& is) : Stud() { 
 		is >> *this;
 	}
 
-	void setName(string tempVardas) {
-		vardas = tempVardas;
-	}
-	inline string getName() const { return vardas; }
-	void setLastName(string tempPavarde) {
-		pavarde = tempPavarde;
-	}
-	inline string getLastName() const { return pavarde; }
-
 	//operatoriai
-	friend std::istream& operator>>(std::istream& in, Stud& student);
-	friend std::ostream& operator<<(std::ostream& out, const Stud& student);
+	friend istream& operator>>(istream& in, Stud& student);
+	friend ostream& operator<<(ostream& out, const Stud& student);
 
 	//metodu perdengimas
 	void input(Stud& Lok);
@@ -35,23 +25,20 @@ public:
 	void output(list<Stud>& stud, int choice);
 	void output(const string& fileName, list<Stud>& stud);
 
-	~Stud() {}//I. destruktorius
+	~Stud() { ND.clear(); }//I. destruktorius
 
 	//II. copy constructor
-	Stud(const Stud& copy) {
-		vardas = copy.vardas;
-		pavarde = copy.pavarde;
-		ND = copy.ND; 
-		vid = copy.vid;
-		med = copy.med;
-		egz = copy.egz;
-	}
+	Stud(const Stud& copy) 
+		: Human(copy), 
+			ND(copy.ND),
+			vid(copy.vid),
+			med(copy.med),
+			egz(copy.egz){}
 
 	///III. copy ssigment
 	Stud& operator=(const Stud& other) {
 		if (this != &other) {
-			vardas = other.vardas;
-			pavarde = other.pavarde;
+			Human::operator=(other);
 			ND = other.ND;
 			vid = other.vid;
 			med = other.med;
@@ -59,6 +46,8 @@ public:
 		}
 		return *this;
 	}
+
+	void whoAmI() const { std::cout << "As esu is Stud klasės\n"; }
 };
 
 void val(Stud& Lok);
