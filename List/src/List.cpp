@@ -167,8 +167,6 @@ int main() {
                 cin >> textFile;
                 Temp.input(textFile, List1);
 
-                cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde"
-                    << setw(15) << left << "Galutinis bal." << setw(15) << left << "Struct Adresas" << endl;
                 for (Stud& student : List1) {
                     finalgrade(student);
                 }
@@ -225,10 +223,6 @@ int main() {
                 cerr << e.what() << endl;
             }
         }
-
-        cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde"
-            << setw(15) << left << "Galutinis bal." << setw(15) << left << "Struct Adresas" << endl;
-
         Temp.output(List1, finalChoice);
     }
 }
