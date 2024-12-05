@@ -1,4 +1,6 @@
 #include<iostream>
+#include<fstream>
+#include<sstream>
 #include<iomanip>
 #include<string>
 #include<vector>
@@ -26,6 +28,8 @@ using std::getline;
 using std::streamsize;
 using std::ifstream;
 using std::ofstream;
+using std::ostream;
+using std::istream;
 using std::numeric_limits;
 using std::string;
 using std::vector;
