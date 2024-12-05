@@ -203,7 +203,7 @@ int main() {
             val(Temp);
         }
 
-        cout << "Ar norite galutini ivertinima skaiciuoti su mediana ar vidurkiu? (0 - vidurkiu, 1 - mediana)" << endl;
+        cout << "Ar norite galutini ivertinima skaiciuoti su mediana ir vidurkiu ar tik su vidurkiu? (0 - tik vidurkis, 1 - ir mediana)" << endl;
 
         while (true) {
             try {
@@ -223,9 +223,6 @@ int main() {
                 cerr << e.what() << endl;
             }
         }
-
-        cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde"
-            << setw(15) << left << "Galutinis bal." << setw(15) << left << "Struct Adresas" << endl;
 
         Temp.output(Vec1, finalChoice);
     }
