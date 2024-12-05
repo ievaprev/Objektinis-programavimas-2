@@ -87,8 +87,7 @@ void Stud::output(const string& fileName, vector<Stud>& stud)
 
 	for (Stud& duom : stud)
 	{
-		input << setw(18) << left << duom.getLastName() << setw(15) << left << duom.getName()
-			<< setw(3) << right << fixed << setprecision(2) << duom.vid << endl;
+		input << fixed << setprecision(2) << duom<< endl;
 	}
 
 	ofstream outfile(fileName);
