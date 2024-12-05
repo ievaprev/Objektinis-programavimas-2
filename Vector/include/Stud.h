@@ -35,7 +35,7 @@ public:
 	void output(vector<Stud>& stud, int choice);
 	void output(const string& fileName, vector<Stud>& stud);
 
-	~Stud() {}//I. destruktorius
+	~Stud() { ND.clear(); }//I. destruktorius
 
 	//II. copy constructor
 	Stud(const Stud& copy) {
