@@ -59,6 +59,19 @@ V0.2, v0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 fai
 * RAM: 16 GB
 * SDD: 1 TB
   
+# v1.5
+**v1.5 atnaujinimai:**
+* Sukurta bazinė klasė Human
+* Padaryta, kad Žmogui skirta bazinė klasė Human būtų abstrakčioji
+* Stud klasė nuo šiol yra Human išvestinė klasė
+
+### Klasių diagramos
+--------------
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/630c65e6-8472-49c0-bbf3-3e4481cfae72" alt="Description" width="400"/>
+</p>
+<img src="https://github.com/user-attachments/assets/585bbc0f-2b49-4ff7-a23d-c7dfa154dd69" alt="Description" width="400"/>
+
 # v1.2
 **v1.2 atnaujinimai:** 
 * Realizuota rule of three (destructor, copy constructor and copy assigment) turimai Stud klasei.
@@ -78,7 +91,7 @@ Sukurti keli metodus su tuo pačiu pavadinimu. Kitaip tariant duomenų iš failo
 * ```void output(const string& fileName, list<Stud>& stud);``` - metodas naudojamas studentų duomenų išvedimui į failus
 
 # V1.1
-**v1.1 atnaujinimai:** Programam nuo šiol naudoja class tipo realizacija, vietoje struct. \
+**v1.1 atnaujinimai:** Programam nuo šiol naudoja class tipo realizacija, vietoje struct. 
 
 **Testavimui naudojamos didesnės apimties failai, norint išsiaiškinti kaip pokytis iš struct į class tipą paveikė didesnės apimties failų veikimo spartą.**
 Naudojama 3 grupavimo strategija ir lists.
