@@ -27,6 +27,13 @@ std::istream& operator>>(std::istream& in, Stud& student) {
 	return in;
 }
 
+ostream& operator<<(ostream& out, const Stud& student) {
+
+	out << setw(18) << left << student.getName() << setw(15) << left << student.getLastName() << setw(15) << left << student.vid;
+
+	return out;
+}
+
 void Stud::input(Stud &Lok) 
 {
 	string name, lastName;
@@ -122,16 +129,20 @@ void Stud::input(Stud &Lok)
 void Stud::output(vector<Stud>& stud, int choice)
 {
 	if (choice == 0) {
+		cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde"
+			<< setw(15) << left << "Galutinis bal." << setw(15) << left << "Struct Adresas" << endl;
 		for (const Stud& student : stud)
-			cout << setw(18) << left << student.getName() << setw(15) << left << student.getLastName()
-			<< setw(15) << left << fixed << setprecision(2) << student.vid << setw(15) << left << &student << endl;
+			cout << fixed << setprecision(2) << student << setw(15) << left << &student << endl;
 
 	}
 	else
 	{
+		cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde"
+			<< setw(15) << left << "Galutinis vid" << setw(15) << left << "Galutinis med" 
+			<< setw(15) << left << "Struct Adresas" << endl;
 		for (const Stud& student : stud)
-			cout << setw(18) << left << student.getName() << setw(15) << left << student.getLastName()
-			<< setw(15) << left << fixed << setprecision(2) << student.med << setw(15) << left << &student << endl;
+
+			cout << fixed << setprecision(2) << student << setw(15) << left << student.med << setw(15) << left << &student << endl;
 	}
 }
 	
@@ -221,26 +232,17 @@ void demonstration() {
 
 	finalgrade(Temp1);
 
-	cout << "1 Objektas:                          " << setw(10) << left << Temp1.getName() << setw(10) << left << Temp1.getLastName() <<
-		setw(30) << left << Temp1.vid << setw(15) << endl;
+	cout << "1 Objektas:                          " << Temp1 << endl;
 	cout << "---------------------" << endl;
 
-	Stud Temp2(Temp1);
+	Stud Temp2;
+	Temp2 = Temp1;
 
-	cout << "2 Objektas, kopija 1 objekto:        " << setw(10) << left << Temp2.getName() <<
-		setw(10) << left << Temp2.getLastName() << setw(30) << left << Temp2.vid << setw(15) << endl;
+	cout << "2 Objektas, kopija 1 objekto:        " << Temp2 << endl;
 	cout << "---------------------" << endl;
 
-	Stud Temp3("Bor", "Ema", { 4, 10, 3, 9 }, 9);
-	finalgrade(Temp3);
+	Stud Temp3(Temp1);
 
-	cout << "3 Objektas pries copy assigment:     " << setw(10) << left << Temp3.getName() << setw(10) << left << Temp3.getLastName()
-		<< setw(30) << left << Temp3.vid << setw(15) << endl;
+	cout << "3 Objektas po copy assigment:        " << Temp3 << endl;
 	cout << "---------------------" << endl;
-
-	Temp3 = Temp1;
-
-	cout << "3 Objektas po copy assigment:        " << setw(10) << left << Temp3.getName() << setw(10) << left << Temp3.getLastName() << setw(30) << left << Temp3.vid << setw(15) << endl;
-	cout << "---------------------" << endl;
-
 }
