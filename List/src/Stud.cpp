@@ -131,19 +131,23 @@ void Stud::input(Stud &Lok)
 void Stud::output(list<Stud>& stud, int choice)
 {
 	if (choice == 0) {
+		cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde"
+			<< setw(15) << left << "Galutinis bal." << setw(15) << left << "Struct Adresas" << endl;
 		for (const Stud& student : stud)
 			cout << fixed << setprecision(2) << student << setw(15) << left << &student << endl;
 
 	}
 	else
 	{
+		cout << setw(18) << left << "Studento vardas" << setw(15) << left << "Pavarde"
+			<< setw(15) << left << "Galutinis vid" << setw(15) << left << "Galutinis med"
+			<< setw(15) << left << "Struct Adresas" << endl;
 		for (const Stud& student : stud)
-			cout << fixed << setprecision(2) << student << setw(15) << left << &student << endl;
+
+			cout << fixed << setprecision(2) << student << setw(15) << left << student.med << setw(15) << left << &student << endl;
 	}
-	
 }
 	
-
 void val(Stud &Lok)
 {
 	Lok.setName("");
