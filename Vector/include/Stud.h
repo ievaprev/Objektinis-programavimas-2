@@ -17,7 +17,7 @@ public:
 	inline string getLastName() const { return pavarde;}
 	std::istream& readStudent(std::istream&);
 
-	~Stud() = default;
+	~Stud() { ND.clear(); }
 
 };
 
