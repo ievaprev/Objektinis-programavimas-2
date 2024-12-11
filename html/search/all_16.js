@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['setlastname_0',['setLastName',['../class_human.html#a8bb94366b308cc1dab553ea7fd54020f',1,'Human']]],
+  ['setname_1',['setName',['../class_human.html#a59e09e995f01a227510c17a283004254',1,'Human']]],
+  ['sortascending_2',['sortAscending',['../_stud_8h.html#afe24fa2fbb2d216afa5ef17dcae114f6',1,'sortAscending(Stud &amp;a, Stud &amp;b):&#160;Stud.cpp'],['../_stud_8cpp.html#afe24fa2fbb2d216afa5ef17dcae114f6',1,'sortAscending(Stud &amp;a, Stud &amp;b):&#160;Stud.cpp']]],
+  ['sortbychoice_3',['sortByChoice',['../_stud_8h.html#acfbda34f98cc9fd68826a29573378511',1,'sortByChoice(list&lt; Stud &gt; &amp;stud, const int &amp;choice):&#160;Stud.cpp'],['../_stud_8cpp.html#acfbda34f98cc9fd68826a29573378511',1,'sortByChoice(list&lt; Stud &gt; &amp;stud, const int &amp;choice):&#160;Stud.cpp']]],
+  ['sortbyname_4',['sortByName',['../_stud_8h.html#ab22a614ef1ba93602d94038ca961280c',1,'sortByName(Stud &amp;a, Stud &amp;b):&#160;Stud.cpp'],['../_stud_8cpp.html#ab22a614ef1ba93602d94038ca961280c',1,'sortByName(Stud &amp;a, Stud &amp;b):&#160;Stud.cpp']]],
+  ['sortbysurname_5',['sortBySurname',['../_stud_8h.html#a41b737cf139a88c1af2217d0202cf2a0',1,'sortBySurname(Stud &amp;a, Stud &amp;b):&#160;Stud.cpp'],['../_stud_8cpp.html#a41b737cf139a88c1af2217d0202cf2a0',1,'sortBySurname(Stud &amp;a, Stud &amp;b):&#160;Stud.cpp']]],
+  ['sortdecending_6',['sortDecending',['../_stud_8h.html#a42330bc607d065e0259cc4769a65dd39',1,'sortDecending(Stud &amp;a, Stud &amp;b):&#160;Stud.cpp'],['../_stud_8cpp.html#a42330bc607d065e0259cc4769a65dd39',1,'sortDecending(Stud &amp;a, Stud &amp;b):&#160;Stud.cpp']]],
+  ['src_20https_3a_20github_20com_20user_20attachments_20assets_20a41b041b_20e72d_20440e_20ae99_205e3d2833e364_20alt_20description_20width_20500_7',['&lt;img src=&quot;https://github.com/user-attachments/assets/a41b041b-e72d-440e-ae99-5e3d2833e364&quot; alt=&quot;Description&quot; width=&quot;500&quot;/&gt;',['../md__r_e_a_d_m_e.html#autotoc_md45',1,'']]],
+  ['struct_20ir_20klasės_20versija_20ištirta_20su_20optimizavimo_20flagais_20yra_20lentelė_3a_20greitis_20exe_20failo_20dydis_8',['Struct ir Klasės versija ištirta su optimizavimo &quot;flagais&quot; (yra lentelė: greitis, exe failo dydis)',['../md__r_e_a_d_m_e.html#autotoc_md17',1,'']]],
+  ['struct_20list_9',['Struct - list',['../md__r_e_a_d_m_e.html#autotoc_md20',1,'']]],
+  ['struct_20vector_10',['Struct - vector',['../md__r_e_a_d_m_e.html#autotoc_md21',1,'']]],
+  ['stud_11',['Stud',['../class_stud.html',1,'Stud'],['../class_stud.html#a97585839898d45dc9fc815d5b36e2b69',1,'Stud::Stud()'],['../class_stud.html#a72beb6fd3d49d3b1880da04dd9ec66e9',1,'Stud::Stud(string vardas, string pavarde, vector&lt; int &gt; nd, int egz)'],['../class_stud.html#a892524edd4410fdf235ded0baf9584b2',1,'Stud::Stud(std::istream &amp;is)'],['../class_stud.html#a73e54c13692a8d04eca30f2dc31f4a94',1,'Stud::Stud(const Stud &amp;copy)']]],
+  ['stud_2ecpp_12',['Stud.cpp',['../_stud_8cpp.html',1,'']]],
+  ['stud_2eh_13',['Stud.h',['../_stud_8h.html',1,'']]],
+  ['studentai_201000_14',['Studentai 1000',['../md__r_e_a_d_m_e.html#autotoc_md24',1,'Failas: Studentai 1000'],['../md__r_e_a_d_m_e.html#autotoc_md36',1,'Failas: Studentai 1000'],['../md__r_e_a_d_m_e.html#autotoc_md48',1,'Failas: Studentai 1000']]],
+  ['studentai_2010000_15',['Studentai 10000',['../md__r_e_a_d_m_e.html#autotoc_md26',1,'Failas: Studentai 10000'],['../md__r_e_a_d_m_e.html#autotoc_md38',1,'Failas: Studentai 10000'],['../md__r_e_a_d_m_e.html#autotoc_md50',1,'Failas: Studentai 10000']]],
+  ['studentai_20100000_16',['Studentai 100000',['../md__r_e_a_d_m_e.html#autotoc_md28',1,'Failas: Studentai 100000'],['../md__r_e_a_d_m_e.html#autotoc_md40',1,'Failas: Studentai 100000'],['../md__r_e_a_d_m_e.html#autotoc_md52',1,'Failas: Studentai 100000']]],
+  ['studentai_201000000_17',['Studentai 1000000',['../md__r_e_a_d_m_e.html#autotoc_md14',1,'Failas: Studentai 1000000'],['../md__r_e_a_d_m_e.html#autotoc_md30',1,'Failas: Studentai 1000000'],['../md__r_e_a_d_m_e.html#autotoc_md42',1,'Failas: Studentai 1000000'],['../md__r_e_a_d_m_e.html#autotoc_md54',1,'Failas: Studentai 1000000']]],
+  ['studentai_2010000000_18',['Studentai 10000000',['../md__r_e_a_d_m_e.html#autotoc_md16',1,'Failas: Studentai 10000000'],['../md__r_e_a_d_m_e.html#autotoc_md32',1,'Failas: Studentai 10000000'],['../md__r_e_a_d_m_e.html#autotoc_md44',1,'Failas: Studentai 10000000'],['../md__r_e_a_d_m_e.html#autotoc_md56',1,'Failas: Studentai 10000000']]],
+  ['su_20optimizavimo_20flagais_20yra_20lentelė_3a_20greitis_20exe_20failo_20dydis_19',['Struct ir Klasės versija ištirta su optimizavimo &quot;flagais&quot; (yra lentelė: greitis, exe failo dydis)',['../md__r_e_a_d_m_e.html#autotoc_md17',1,'']]]
+];
