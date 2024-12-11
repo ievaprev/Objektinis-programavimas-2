@@ -19,7 +19,7 @@ Vartotojai gali pasirinkti, ar namų darbų rezultatus skaičiuoti naudojant med
 * MyLib.h – faile deklaruotos visos programoje naudojamos bibliotekos.
 * Stud.h – faile aprašyta Stud struktūra, apibrėžianti studentą, ir deklaruotos su ja susijusios funkcijos.
 * Timer.h – faile aprašyta klasė, skirta laiko matavimui programos vykdymo metu.
-* Test.pp - faile aprašyti konstruktoriaus, getteriu ir seteriu, kopijavimo konstruktoriaus testai.
+* Test.cpp - faile aprašyti konstruktoriaus, getteriu ir seteriu, kopijavimo konstruktoriaus testai.
   
 **Metodai:**
 * Vartotojas gali pasirinkti, ar studentų informaciją nuskaityti iš tekstinio failo, ar įvesti rankiniu būdu.
