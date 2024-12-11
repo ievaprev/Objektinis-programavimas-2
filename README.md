@@ -19,6 +19,7 @@ Vartotojai gali pasirinkti, ar namų darbų rezultatus skaičiuoti naudojant med
 * MyLib.h – faile deklaruotos visos programoje naudojamos bibliotekos.
 * Stud.h – faile aprašyta Stud struktūra, apibrėžianti studentą, ir deklaruotos su ja susijusios funkcijos.
 * Timer.h – faile aprašyta klasė, skirta laiko matavimui programos vykdymo metu.
+* Test.pp - faile aprašyti konstruktoriaus, getteriu ir seteriu, kopijavimo konstruktoriaus testai.
   
 **Metodai:**
 * Vartotojas gali pasirinkti, ar studentų informaciją nuskaityti iš tekstinio failo, ar įvesti rankiniu būdu.
@@ -58,7 +59,27 @@ V0.2, v0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 fai
 * CPU: Intel(R) Core(TM) Ultra 7 155H **3.80 GHz**
 * RAM: 16 GB
 * SDD: 1 TB
-  
+
+# v2.0
+**v2.0 atnaujinimai:**
+* Sukurta programos dokumentacija naudojant Doxygen
+* Realizuoti trys unit testai su klase: konstruktoriui, geteriam ir seteriam, kopijavimo konstruktoriui
+```
+//Test of constructor using google tests
+TEST(Student, Constructor) {
+   <...>  
+}
+//Test of getters and setters for name and last name, using google tests
+TEST(Student, GettersAndSetters) {
+
+    <...>
+}
+
+//Test of the copy constructor, using google tests
+TEST(Student, CopyConstructor) {
+   <...>
+}
+```
 # v1.5
 **v1.5 atnaujinimai:**
 * Sukurta bazinė klasė Human
