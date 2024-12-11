@@ -63,7 +63,9 @@ V0.2, v0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 fai
 # v2.0
 **v2.0 atnaujinimai:**
 * Sukurta programos dokumentacija naudojant Doxygen
-* Realizuoti trys unit testai su klase: konstruktoriui, geteriam ir seteriam, kopijavimo konstruktoriui
+* Realizuoti trys unit testai su klase: konstruktoriui, geteriam ir seteriam, kopijavimo konstruktoriui. Naudojant google test framework.
+
+### Unit tests
 ```
 //Test of constructor using google tests
 TEST(Student, Constructor) {
@@ -80,6 +82,9 @@ TEST(Student, CopyConstructor) {
    <...>
 }
 ```
+### Programos paleidimas
+Paleidus run.bat filą paleidžiama List.exe failas(pagrindinis programos failas), ProjectTest.exe(Unit testų paleidimas).
+
 # v1.5
 **v1.5 atnaujinimai:**
 * Sukurta bazinė klasė Human
