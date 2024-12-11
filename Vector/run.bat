@@ -4,7 +4,7 @@ cd build
 cmake ..
 cmake --build . --config Release
 cd ..
-copy src\*.txt build\x64\Release
-cd build\x64\Release
-Objektinis-programavimas.exe
+copy src\*.txt build
+cd build\Release
+Vector.exe
 pause
