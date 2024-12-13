@@ -73,6 +73,13 @@ V0.2, v0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 fai
 </p>
 <img src="https://github.com/user-attachments/assets/585bbc0f-2b49-4ff7-a23d-c7dfa154dd69" alt="Description" width="400"/>
 
+# v3.0
+**v3.0 atnaujinimai:**
+* Sukurta programos diegimas
+
+**Paleidimo instrukcija:**
+* Parsisiųsti zip up projekto. Išskleisti ir paleisti Release folderį esantį AppSetup. ProgramFiles(x86) atsiras programos exe failas.
+  
 # v2.0
 **v2.0 atnaujinimai:**
 * Sukurta programos dokumentacija naudojant Doxygen
