@@ -59,19 +59,6 @@ V0.2, v0.3 ir v1.0 dalyse buvo atliktas testavimas, naudojant sugeneruotus 5 fai
 * CPU: Intel(R) Core(TM) Ultra 7 155H **3.80 GHz**
 * RAM: 16 GB
 * SDD: 1 TB
-  
-# v1.5
-**v1.5 atnaujinimai:**
-* Sukurta bazinė klasė Human
-* Padaryta, kad Žmogui skirta bazinė klasė Human būtų abstrakčioji
-* Stud klasė nuo šiol yra Human išvestinė klasė
-
-### Klasių diagramos
---------------
-<p align="left">
-  <img src="https://github.com/user-attachments/assets/630c65e6-8472-49c0-bbf3-3e4481cfae72" alt="Description" width="400"/>
-</p>
-<img src="https://github.com/user-attachments/assets/585bbc0f-2b49-4ff7-a23d-c7dfa154dd69" alt="Description" width="400"/>
 
 # v3.0
 **v3.0 atnaujinimai:**
@@ -102,6 +89,19 @@ TEST(Student, CopyConstructor) {
    <...>
 }
 ```
+# v1.5
+**v1.5 atnaujinimai:**
+* Sukurta bazinė klasė Human
+* Padaryta, kad Žmogui skirta bazinė klasė Human būtų abstrakčioji
+* Stud klasė nuo šiol yra Human išvestinė klasė
+
+### Klasių diagramos
+--------------
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/630c65e6-8472-49c0-bbf3-3e4481cfae72" alt="Description" width="400"/>
+</p>
+<img src="https://github.com/user-attachments/assets/585bbc0f-2b49-4ff7-a23d-c7dfa154dd69" alt="Description" width="400"/>
+
 # v1.2
 **v1.2 atnaujinimai:** 
 * Realizuota rule of three (destructor, copy constructor and copy assigment) turimai Stud klasei.
